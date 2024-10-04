@@ -1,0 +1,26 @@
+{
+  "name": "generate_anime_character_model",
+  "description": "Generates a 3D model (FBX or OBJ) of an anime character from an input image.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "model_format"
+    ],
+    "properties": {
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the image containing the anime character to be converted into a 3D model."
+      },
+      "model_format": {
+        "enum": [
+          "FBX",
+          "OBJ"
+        ],
+        "type": "string",
+        "description": "The desired output format for the 3D model: either FBX or OBJ."
+      }
+    }
+  }
+}

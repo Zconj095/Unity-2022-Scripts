@@ -1,0 +1,35 @@
+{
+  "name": "generate_human_mesh",
+  "description": "Generates a 3D human model from an input image. The AI can create either high poly or low poly meshes based on the quality of the input image.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "output_quality",
+      "image_quality"
+    ],
+    "properties": {
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the image containing the human figure to be converted into a 3D mesh."
+      },
+      "image_quality": {
+        "enum": [
+          "high",
+          "low"
+        ],
+        "type": "string",
+        "description": "The quality of the input image: high for high-resolution images or low for low-resolution images."
+      },
+      "output_quality": {
+        "enum": [
+          "high_poly",
+          "low_poly"
+        ],
+        "type": "string",
+        "description": "The desired output quality: high_poly for a detailed mesh or low_poly for a simplified mesh."
+      }
+    }
+  }
+}

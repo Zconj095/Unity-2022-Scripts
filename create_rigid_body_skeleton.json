@@ -1,0 +1,48 @@
+{
+  "name": "create_rigid_body_skeleton",
+  "description": "Generates a rigid body skeleton system for animal movement based on video analysis.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "skeleton_format",
+      "detail_level"
+    ],
+    "required": [
+      "video_file",
+      "animal_type"
+    ],
+    "properties": {
+      "video_file": {
+        "type": "string",
+        "default": "animal_movement.mp4",
+        "description": "The path to the video file from which animal movement will be analyzed."
+      },
+      "animal_type": {
+        "type": "string",
+        "default": "dog",
+        "description": "Specifies the type of animal for which the skeleton system is being created (e.g., 'dog', 'cat', 'bird')."
+      },
+      "detail_level": {
+        "enum": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "type": "string",
+        "default": "medium",
+        "description": "Specifies the level of detail in the skeleton system."
+      },
+      "skeleton_format": {
+        "enum": [
+          "FBX",
+          "OBJ",
+          "BLEND"
+        ],
+        "type": "string",
+        "default": "FBX",
+        "description": "Specifies the format for the output skeleton file."
+      }
+    }
+  }
+}

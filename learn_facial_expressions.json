@@ -1,0 +1,24 @@
+{
+  "name": "learn_facial_expressions",
+  "description": "Analyzes image or video input to detect and learn facial expressions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "video_input"
+    ],
+    "required": [
+      "image_input"
+    ],
+    "properties": {
+      "image_input": {
+        "type": "string",
+        "description": "The image input, in base64 format, containing the facial expressions to be analyzed."
+      },
+      "video_input": {
+        "type": "string",
+        "description": "The video input, in base64 format, containing the facial expressions to be analyzed. This is optional."
+      }
+    }
+  }
+}

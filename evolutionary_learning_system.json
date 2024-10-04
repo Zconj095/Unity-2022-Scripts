@@ -1,0 +1,83 @@
+{
+  "name": "evolutionary_learning_system",
+  "description": "Enables the AI to evolve and upgrade its cognitive behaviors and system capabilities over time by learning from new information provided continuously.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "learning_duration",
+      "information_feed",
+      "evolution_goals"
+    ],
+    "properties": {
+      "evolution_goals": {
+        "type": "object",
+        "required": [
+          "cognitive_behaviors",
+          "self-upgrade_capability"
+        ],
+        "properties": {
+          "cognitive_behaviors": {
+            "type": "array",
+            "items": {
+              "enum": [
+                "speech_synthesis",
+                "UI_upgrade",
+                "pattern_recognition",
+                "problem-solving",
+                "emotion_detection"
+              ],
+              "type": "string",
+              "description": "Specific cognitive behaviors or system capabilities that the AI should focus on evolving."
+            },
+            "description": "List of targeted cognitive behaviors or system capabilities for evolution."
+          },
+          "self-upgrade_capability": {
+            "type": "boolean",
+            "description": "Whether the AI is allowed to implement upgrades autonomously based on the learned information."
+          }
+        },
+        "description": "Goals for the AI's evolution and self-upgrading capabilities."
+      },
+      "information_feed": {
+        "type": "object",
+        "required": [
+          "data_type",
+          "content_sources"
+        ],
+        "properties": {
+          "data_type": {
+            "enum": [
+              "speech_terminology",
+              "UI_design",
+              "pattern_recognition",
+              "coding_skills",
+              "general_knowledge"
+            ],
+            "type": "string",
+            "description": "The type of information being fed to the AI for learning and evolution."
+          },
+          "content_sources": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "The sources or formats of the content provided to the AI, such as text documents, audio files, videos, or coding examples."
+            },
+            "description": "List of content sources that the AI will use to learn and evolve."
+          }
+        },
+        "description": "Details about the information feed for the AI to evolve its capabilities."
+      },
+      "learning_duration": {
+        "enum": [
+          "daily",
+          "weekly",
+          "monthly",
+          "yearly"
+        ],
+        "type": "string",
+        "description": "The frequency at which the AI will evaluate and integrate new information for cognitive and system upgrades."
+      }
+    }
+  }
+}

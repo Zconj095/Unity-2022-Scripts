@@ -1,0 +1,35 @@
+{
+  "name": "gain_emotional_understanding",
+  "description": "Analyzes text, speech, or visual data to gain an understanding of the emotional context, allowing the system to interpret and respond to emotional states effectively.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "context"
+    ],
+    "required": [
+      "input_data",
+      "input_type"
+    ],
+    "properties": {
+      "context": {
+        "type": "string",
+        "description": "Additional context that might influence emotional understanding, such as the situation or relationship dynamics. This is optional."
+      },
+      "input_data": {
+        "type": "string",
+        "description": "The input data containing emotional context, such as text, speech, or visual data. This data is analyzed to understand emotions."
+      },
+      "input_type": {
+        "enum": [
+          "text",
+          "speech",
+          "visual"
+        ],
+        "type": "string",
+        "default": "text",
+        "description": "Specifies the type of input data being analyzed: text, speech, or visual."
+      }
+    }
+  }
+}

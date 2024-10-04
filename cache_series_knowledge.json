@@ -1,0 +1,31 @@
+{
+  "name": "cache_series_knowledge",
+  "description": "Caches the knowledge learned from a completed series, organizing it into a complete list of volumes as one series. The AI can then draw upon this knowledge from the entire series.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "series_name",
+      "volume_list"
+    ],
+    "properties": {
+      "series_name": {
+        "type": "string",
+        "description": "The name of the series from which knowledge has been learned."
+      },
+      "volume_list": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "Names or identifiers of the volumes within the series."
+        },
+        "description": "A list of volumes that make up the complete series."
+      },
+      "store_as_complete_series": {
+        "type": "boolean",
+        "default": true,
+        "description": "Whether to store the knowledge as a complete series to be accessed later."
+      }
+    }
+  }
+}

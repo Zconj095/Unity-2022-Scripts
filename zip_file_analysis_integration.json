@@ -1,0 +1,39 @@
+{
+  "name": "zip_file_analysis_integration",
+  "description": "Integrates AI with ZIP file content by extracting and analyzing all files within the .zip, including code files and PDF documents.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "zip_file_path",
+      "analysis_options"
+    ],
+    "properties": {
+      "zip_file_path": {
+        "type": "string",
+        "description": "The path to the .zip file containing code files, PDF files, or other documents."
+      },
+      "analysis_options": {
+        "type": "object",
+        "required": [
+          "include_subdirectories",
+          "file_types_to_analyze"
+        ],
+        "properties": {
+          "file_types_to_analyze": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of file extensions to analyze (e.g., .py, .java, .pdf)."
+          },
+          "include_subdirectories": {
+            "type": "boolean",
+            "description": "Whether to include subdirectories within the .zip file for analysis."
+          }
+        },
+        "description": "Options for analyzing the contents of the .zip file, including file types and subdirectory inclusion."
+      }
+    }
+  }
+}

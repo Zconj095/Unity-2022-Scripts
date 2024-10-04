@@ -1,0 +1,43 @@
+{
+  "name": "synchronize_conversations",
+  "description": "Synchronizes conversation IDs to allow the AI to retrieve and combine instructions from multiple different conversations, enhancing learning and consistency.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "conversation_ids",
+      "learning_objectives"
+    ],
+    "properties": {
+      "output_format": {
+        "enum": [
+          "full_combined",
+          "summary",
+          "insight_highlights"
+        ],
+        "type": "string",
+        "description": "Specifies the format of the output after combining the instructions: full combined data, a summarized version, or key insights."
+      },
+      "retrieval_mode": {
+        "enum": [
+          "sequential",
+          "comprehensive",
+          "filtered"
+        ],
+        "type": "string",
+        "description": "Defines how the AI should retrieve and combine the instructions from the synchronized conversations: sequentially, comprehensively, or filtered by relevance."
+      },
+      "conversation_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of conversation IDs that need to be synchronized and linked together."
+      },
+      "learning_objectives": {
+        "type": "string",
+        "description": "Specific goals for what the AI should learn by synchronizing the conversation data."
+      }
+    }
+  }
+}

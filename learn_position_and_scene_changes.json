@@ -1,0 +1,33 @@
+{
+  "name": "learn_position_and_scene_changes",
+  "description": "Analyzes input from a game engine to detect and learn changes in object positions and scene dynamics over time.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "initial_scene_state",
+      "track_objects"
+    ],
+    "required": [
+      "game_engine_data"
+    ],
+    "properties": {
+      "track_objects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of specific objects to track within the scene for position changes."
+      },
+      "game_engine_data": {
+        "type": "string",
+        "description": "Data from the game engine, typically in a format that includes object positions, scene state, and changes over time."
+      },
+      "initial_scene_state": {
+        "type": "string",
+        "default": "current_scene",
+        "description": "The initial state of the scene, provided to establish a baseline for detecting changes. This is optional."
+      }
+    }
+  }
+}

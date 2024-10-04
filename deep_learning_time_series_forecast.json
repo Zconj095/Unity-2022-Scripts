@@ -1,0 +1,52 @@
+{
+    "name": "deep_learning_time_series_forecast",
+    "description": "Integrates deep learning with time series forecasting to enhance linguistic and cognitive behavior outputs.",
+    "strict": false,
+    "parameters": {
+      "type": "object",
+      "required": [
+        "data_source",
+        "prediction_horizon"
+      ],
+      "properties": {
+        "data_source": {
+          "enum": [
+            "online",
+            "offline"
+          ],
+          "type": "string",
+          "description": "Specify whether the data source is online (real-time) or offline (historical)."
+        },
+        "historical_data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "timestamp",
+              "value"
+            ],
+            "properties": {
+              "value": {
+                "type": "number",
+                "description": "The value of the data point, which could represent any relevant metric (e.g., sentiment score, engagement rate)."
+              },
+              "timestamp": {
+                "type": "string",
+                "format": "date-time",
+                "description": "The timestamp of the data point."
+              }
+            }
+          },
+          "description": "A list of historical data points for offline predictions. Each data point includes a timestamp and a value."
+        },
+        "prediction_horizon": {
+          "type": "integer",
+          "description": "The number of time steps into the future to forecast."
+        },
+        "cognitive_behavior_adjustment": {
+          "type": "boolean",
+          "description": "Whether to adjust linguistic and cognitive behavior outputs based on forecasted data."
+        }
+      }
+    }
+  }

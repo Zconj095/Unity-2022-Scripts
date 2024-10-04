@@ -1,0 +1,32 @@
+{
+  "name": "ebook_learning_and_analysis",
+  "description": "Enables AI to learn from ebooks, providing insights, summaries, and knowledge extraction.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "ebook_file_paths",
+      "learning_goals"
+    ],
+    "properties": {
+      "learning_goals": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Specific goals or areas of focus for learning (e.g., extracting key concepts, summarizing chapters, understanding domain-specific knowledge)."
+      },
+      "ebook_file_paths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Paths to the ebook files that should be analyzed and learned from."
+      },
+      "feedback_enabled": {
+        "type": "boolean",
+        "description": "Whether the AI should provide feedback on what it has learned and suggest insights based on the analysis."
+      }
+    }
+  }
+}

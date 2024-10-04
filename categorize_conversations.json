@@ -1,0 +1,37 @@
+{
+  "name": "categorize_conversations",
+  "description": "Enables categorization of conversations by color code and category labels, with cross-referencing between labels.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "conversation_id",
+      "color_code",
+      "category_labels"
+    ],
+    "properties": {
+      "color_code": {
+        "type": "string",
+        "description": "The color code assigned to this conversation (e.g., '#FF5733' for a specific shade of orange)."
+      },
+      "category_labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of category labels to assign to this conversation (e.g., 'Game Development', 'AI Learning')."
+      },
+      "conversation_id": {
+        "type": "string",
+        "description": "The unique identifier of the conversation to categorize."
+      },
+      "cross_reference_labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of labels to cross-reference with this conversation, linking it to other labeled conversations."
+      }
+    }
+  }
+}

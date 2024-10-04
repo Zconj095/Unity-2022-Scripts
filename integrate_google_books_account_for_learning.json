@@ -1,0 +1,45 @@
+{
+  "name": "integrate_google_books_account_for_learning",
+  "description": "Integrates a personal Google Books account with the AI, allowing it to learn from ebooks and PDF files purchased through Google Play.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "google_account_email",
+      "google_account_password",
+      "books_to_integrate"
+    ],
+    "properties": {
+      "learning_mode": {
+        "enum": [
+          "ebook_only",
+          "pdf_only",
+          "all_content"
+        ],
+        "type": "string",
+        "description": "Specifies the type of content the AI should focus on learning: ebooks, PDFs, or both."
+      },
+      "learning_goals": {
+        "type": "string",
+        "description": "Specific learning objectives or goals the AI should focus on while processing the books."
+      },
+      "books_to_integrate": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "The specific books or PDFs the AI should learn from."
+        },
+        "description": "A list of titles or IDs of the books that the AI should integrate and learn from."
+      },
+      "google_account_email": {
+        "type": "string",
+        "description": "The email address associated with the user's Google account."
+      },
+      "google_account_password": {
+        "type": "string",
+        "format": "password",
+        "description": "The password for the user's Google account."
+      }
+    }
+  }
+}

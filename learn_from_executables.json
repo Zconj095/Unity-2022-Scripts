@@ -1,0 +1,40 @@
+{
+  "name": "learn_from_executables",
+  "description": "Allows the AI to learn content from .exe files and installed programs on the user's PC, extracting relevant data, recognizing patterns, and understanding program behavior.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "file_paths",
+      "learning_focus"
+    ],
+    "properties": {
+      "file_paths": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of file paths to .exe files or directories where installed programs are located."
+      },
+      "output_format": {
+        "enum": [
+          "summary",
+          "detailed_report",
+          "interactive_session"
+        ],
+        "type": "string",
+        "description": "Specifies the format of the output after learning: a summary, a detailed report, or an interactive session where the AI can answer queries about the learned content."
+      },
+      "learning_focus": {
+        "enum": [
+          "code_analysis",
+          "behavior_analysis",
+          "pattern_recognition",
+          "interaction_monitoring"
+        ],
+        "type": "string",
+        "description": "Specifies the focus area for learning: analyzing the code, understanding program behavior, recognizing patterns, or monitoring program interactions."
+      }
+    }
+  }
+}

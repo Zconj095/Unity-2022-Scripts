@@ -1,0 +1,49 @@
+{
+  "name": "learn_usage_patterns",
+  "description": "Enables the AI to monitor and learn from the user's interactions with advanced programs, improving coding capabilities and developing new skills through pattern recognition.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "program_names",
+      "monitoring_duration",
+      "learning_focus"
+    ],
+    "properties": {
+      "output_format": {
+        "enum": [
+          "text_summary",
+          "interactive_session",
+          "tutorial_generation"
+        ],
+        "type": "string",
+        "description": "Specifies the format of the output after learning: a text summary of learned patterns, an interactive session where the AI can answer questions, or generation of tutorials based on learned skills."
+      },
+      "program_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of advanced programs from which the AI will learn usage patterns (e.g., Unity, Unreal Engine, Visual Studio)."
+      },
+      "learning_focus": {
+        "enum": [
+          "coding",
+          "skill_development",
+          "pattern_recognition"
+        ],
+        "type": "string",
+        "description": "Specifies the focus area for learning: enhancing coding capabilities, developing new skills, or recognizing patterns."
+      },
+      "monitoring_duration": {
+        "enum": [
+          "short_term",
+          "long_term",
+          "continuous"
+        ],
+        "type": "string",
+        "description": "Specifies the duration for which the AI will monitor the user's interactions: short-term, long-term, or continuous monitoring."
+      }
+    }
+  }
+}

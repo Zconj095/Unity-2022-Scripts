@@ -1,0 +1,37 @@
+{
+  "name": "generate_text_from_video",
+  "description": "Generates descriptive or analytical text based on the content of a provided video. The system learns from the visual and auditory data within the video to produce text output that summarizes or analyzes the video content.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "output_style",
+      "language"
+    ],
+    "required": [
+      "video_data"
+    ],
+    "properties": {
+      "language": {
+        "type": "string",
+        "default": "en",
+        "description": "The language in which the text should be generated."
+      },
+      "video_data": {
+        "type": "string",
+        "description": "The video data encoded in a format suitable for analysis. Typically, this would be base64 encoded video or a video URL."
+      },
+      "output_style": {
+        "enum": [
+          "summary",
+          "transcript",
+          "analysis",
+          "caption"
+        ],
+        "type": "string",
+        "default": "summary",
+        "description": "Specifies the style of the generated text: summary of the video, full transcript, analytical text, or captions."
+      }
+    }
+  }
+}

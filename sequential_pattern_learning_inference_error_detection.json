@@ -1,0 +1,57 @@
+{
+  "name": "sequential_pattern_learning_inference_error_detection",
+  "description": "Learns sequential patterns from text or code for inference and linear-based code outputs, detecting errors based on deviations from learned patterns.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "training_sequences",
+      "inference_parameters",
+      "error_detection_threshold"
+    ],
+    "properties": {
+      "training_sequences": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "sequence_type",
+            "sequence_data"
+          ],
+          "properties": {
+            "sequence_data": {
+              "type": "string",
+              "description": "The actual sequence of text or code used for training."
+            },
+            "sequence_type": {
+              "type": "string",
+              "description": "The type of sequence (e.g., text, code)."
+            }
+          }
+        },
+        "description": "A list of sequences used for training the model to learn patterns."
+      },
+      "inference_parameters": {
+        "type": "object",
+        "required": [
+          "sequence_type",
+          "input_sequence"
+        ],
+        "properties": {
+          "sequence_type": {
+            "type": "string",
+            "description": "The type of sequence to be inferred or checked for errors (e.g., text, code)."
+          },
+          "input_sequence": {
+            "type": "string",
+            "description": "The input sequence that will be analyzed for inference or error detection."
+          }
+        }
+      },
+      "error_detection_threshold": {
+        "type": "number",
+        "description": "The threshold for detecting errors in the sequence based on pattern deviations."
+      }
+    }
+  }
+}

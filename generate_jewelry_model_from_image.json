@@ -1,0 +1,36 @@
+{
+  "name": "generate_jewelry_model_from_image",
+  "description": "Extracts jewelry from an image and generates a high-quality 3D model of the jewelry.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "model_format",
+      "quality"
+    ],
+    "properties": {
+      "quality": {
+        "enum": [
+          "high",
+          "medium",
+          "low"
+        ],
+        "type": "string",
+        "description": "The quality of the generated 3D model. High quality preserves all details as in the image."
+      },
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the image containing the jewelry to be converted into a 3D model."
+      },
+      "model_format": {
+        "enum": [
+          "FBX",
+          "OBJ"
+        ],
+        "type": "string",
+        "description": "The desired output format for the 3D model: either FBX or OBJ."
+      }
+    }
+  }
+}

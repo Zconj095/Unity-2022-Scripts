@@ -1,0 +1,42 @@
+{
+  "name": "learn_and_generate_fbx_animations",
+  "description": "Learns and generates FBX files with animations from anime characters. The system processes visual data to create 3D animations based on the movements and actions observed in the anime.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "character_name",
+      "animation_type",
+      "output_quality"
+    ],
+    "required": [
+      "anime_data"
+    ],
+    "properties": {
+      "anime_data": {
+        "type": "string",
+        "description": "The anime content in a format suitable for analysis, such as encoded video data or detailed character design sheets."
+      },
+      "animation_type": {
+        "type": "string",
+        "default": "all",
+        "description": "Specifies the type of animation to generate, such as fighting, walking, or specific actions seen in the anime."
+      },
+      "character_name": {
+        "type": "string",
+        "default": "all",
+        "description": "The name of the specific character to focus on when generating FBX animations. If left blank, the system will generate FBX animations for all characters in the provided anime data."
+      },
+      "output_quality": {
+        "enum": [
+          "standard",
+          "high",
+          "ultra"
+        ],
+        "type": "string",
+        "default": "standard",
+        "description": "Specifies the quality of the generated FBX files."
+      }
+    }
+  }
+}

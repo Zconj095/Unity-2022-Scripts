@@ -1,0 +1,97 @@
+{
+  "name": "animation_creation_through_analytics",
+  "description": "Learns to create animations by analyzing games played on the computer and analyzing related programs. Captures gameplay data and program code to generate new animations.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "gameplay_data",
+      "program_data",
+      "output_parameters"
+    ],
+    "properties": {
+      "program_data": {
+        "type": "object",
+        "required": [
+          "source_code",
+          "program_type"
+        ],
+        "properties": {
+          "source_code": {
+            "type": "string",
+            "description": "The program source code related to animation logic."
+          },
+          "program_type": {
+            "enum": [
+              "game_engine",
+              "animation_software",
+              "custom_tool"
+            ],
+            "type": "string",
+            "description": "The type of program being analyzed."
+          }
+        },
+        "description": "Details of the program code to be analyzed for animation creation."
+      },
+      "gameplay_data": {
+        "type": "object",
+        "required": [
+          "game_title",
+          "recording_duration",
+          "focus_area"
+        ],
+        "properties": {
+          "focus_area": {
+            "enum": [
+              "character_movement",
+              "combat",
+              "environment_interaction",
+              "npc_behavior"
+            ],
+            "type": "string",
+            "description": "The specific area of gameplay to focus on for animation learning."
+          },
+          "game_title": {
+            "type": "string",
+            "description": "The title of the game being analyzed for animation learning."
+          },
+          "recording_duration": {
+            "type": "integer",
+            "description": "The duration of gameplay recording in seconds."
+          }
+        },
+        "description": "Details of the gameplay data to be captured and analyzed."
+      },
+      "output_parameters": {
+        "type": "object",
+        "required": [
+          "animation_format",
+          "animation_type"
+        ],
+        "properties": {
+          "animation_type": {
+            "enum": [
+              "walk_cycle",
+              "fight_sequence",
+              "environment_interaction",
+              "idle_animation"
+            ],
+            "type": "string",
+            "description": "The type of animation to be generated based on the analyzed data."
+          },
+          "animation_format": {
+            "enum": [
+              "FBX",
+              "OBJ",
+              "Maya",
+              "Blender"
+            ],
+            "type": "string",
+            "description": "The desired output format for the generated animation."
+          }
+        },
+        "description": "Parameters defining the output animation."
+      }
+    }
+  }
+}

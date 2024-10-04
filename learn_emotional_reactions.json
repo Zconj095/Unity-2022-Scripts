@@ -1,0 +1,34 @@
+{
+  "name": "learn_emotional_reactions",
+  "description": "Analyzes input to detect and learn emotional reactions, which are responses to stimuli that manifest as expressions, behaviors, or physiological changes.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "video_input",
+      "audio_input",
+      "text_input"
+    ],
+    "required": [
+      "image_input"
+    ],
+    "properties": {
+      "text_input": {
+        "type": "string",
+        "description": "The text input describing the situation or event that led to the emotional reaction, to provide context for the analysis. This is optional."
+      },
+      "audio_input": {
+        "type": "string",
+        "description": "The audio input, in base64 format, capturing vocal emotional reactions to be analyzed. This is optional."
+      },
+      "image_input": {
+        "type": "string",
+        "description": "The image input, in base64 format, capturing the emotional reactions to be analyzed."
+      },
+      "video_input": {
+        "type": "string",
+        "description": "The video input, in base64 format, capturing the emotional reactions to be analyzed. This is optional."
+      }
+    }
+  }
+}

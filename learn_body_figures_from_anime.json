@@ -1,0 +1,36 @@
+{
+  "name": "learn_body_figures_from_anime",
+  "description": "Analyzes and learns the body figures, proportions, and physical characteristics of anime characters. The system processes visual data from anime to extract details about character design, body shapes, and stylistic features.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "character_name",
+      "output_format"
+    ],
+    "required": [
+      "anime_data"
+    ],
+    "properties": {
+      "anime_data": {
+        "type": "string",
+        "description": "The anime content in a format suitable for analysis. This could be encoded video data, image data, or detailed character design sheets."
+      },
+      "output_format": {
+        "enum": [
+          "summary",
+          "detailed_analysis",
+          "character_model"
+        ],
+        "type": "string",
+        "default": "summary",
+        "description": "Specifies how the learned body figure information should be output: as a summary, detailed analysis, or a 3D character model outline."
+      },
+      "character_name": {
+        "type": "string",
+        "default": "all",
+        "description": "The name of the specific character to analyze. If left blank, the system will learn from all characters in the provided anime data."
+      }
+    }
+  }
+}

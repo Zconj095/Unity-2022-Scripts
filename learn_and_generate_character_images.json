@@ -1,0 +1,47 @@
+{
+  "name": "learn_and_generate_character_images",
+  "description": "Learns and generates images of characters from anime in both 2D and 3D formats. The system processes visual data to create accurate representations of characters it has learned.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "character_name",
+      "image_format",
+      "output_quality"
+    ],
+    "required": [
+      "anime_data"
+    ],
+    "properties": {
+      "anime_data": {
+        "type": "string",
+        "description": "The anime content in a format suitable for analysis. This could be encoded video data, image data, or detailed character design sheets."
+      },
+      "image_format": {
+        "enum": [
+          "2D",
+          "3D",
+          "both"
+        ],
+        "type": "string",
+        "default": "both",
+        "description": "Specifies the format of the generated images: 2D, 3D, or both."
+      },
+      "character_name": {
+        "type": "string",
+        "default": "all",
+        "description": "The name of the specific character to learn and generate images of. If left blank, the system will generate images for all characters in the provided anime data."
+      },
+      "output_quality": {
+        "enum": [
+          "standard",
+          "high",
+          "ultra"
+        ],
+        "type": "string",
+        "default": "standard",
+        "description": "Specifies the quality of the generated images."
+      }
+    }
+  }
+}

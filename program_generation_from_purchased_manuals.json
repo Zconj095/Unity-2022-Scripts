@@ -1,0 +1,70 @@
+{
+  "name": "program_generation_from_purchased_manuals",
+  "description": "Generates new programs by reading PDF manuals and utilizing purchased assets from platforms like Unity, Unreal Engine, and UPBGE, based on provided title, purchase date, and order details.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "manual_details",
+      "manual_files",
+      "asset_integration"
+    ],
+    "properties": {
+      "manual_files": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "Paths to the PDF manual files to be used for generating the program."
+        },
+        "description": "List of PDF manual files that contain the instructions for generating the program."
+      },
+      "manual_details": {
+        "type": "object",
+        "required": [
+          "title_name",
+          "purchase_date",
+          "order_location"
+        ],
+        "properties": {
+          "title_name": {
+            "type": "string",
+            "description": "The title or name of the program or project to be generated."
+          },
+          "purchase_date": {
+            "type": "string",
+            "format": "date",
+            "description": "The date the manual or assets were purchased."
+          },
+          "order_location": {
+            "type": "string",
+            "description": "The platform or store where the manual or assets were ordered (e.g., Unity Asset Store, Unreal Marketplace, Amazon, etc.)."
+          }
+        },
+        "description": "Details about the purchased manuals and assets."
+      },
+      "asset_integration": {
+        "type": "object",
+        "required": [
+          "asset_type",
+          "asset_details"
+        ],
+        "properties": {
+          "asset_type": {
+            "enum": [
+              "Unity",
+              "Unreal",
+              "UPBGE"
+            ],
+            "type": "string",
+            "description": "The type of asset platform to integrate (Unity, Unreal Engine, or UPBGE)."
+          },
+          "asset_details": {
+            "type": "string",
+            "description": "Details of the assets to be integrated (e.g., specific package names, asset features, etc.)."
+          }
+        },
+        "description": "Information about the assets to be used in the generated program."
+      }
+    }
+  }
+}

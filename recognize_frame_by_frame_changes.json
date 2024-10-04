@@ -1,0 +1,39 @@
+{
+  "name": "recognize_frame_by_frame_changes",
+  "description": "Analyzes and recognizes sequential frame-by-frame changes in animations or game frames, useful for tracking subtle changes in motion, animation, or scene dynamics.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "frame_rate",
+      "track_objects",
+      "threshold_for_change"
+    ],
+    "required": [
+      "animation_data"
+    ],
+    "properties": {
+      "frame_rate": {
+        "type": "integer",
+        "default": 30,
+        "description": "The frame rate of the animation or game, usually in frames per second (FPS)."
+      },
+      "track_objects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of specific objects or elements within the animation to track across frames."
+      },
+      "animation_data": {
+        "type": "string",
+        "description": "The animation or game frame data in a format that allows sequential analysis. This is typically a series of frames or a video."
+      },
+      "threshold_for_change": {
+        "type": "number",
+        "default": 0.1,
+        "description": "The sensitivity threshold for detecting changes between frames. Lower values detect finer changes."
+      }
+    }
+  }
+}

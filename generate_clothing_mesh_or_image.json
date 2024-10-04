@@ -1,0 +1,37 @@
+{
+  "name": "generate_clothing_mesh_or_image",
+  "description": "Generates a high-resolution 3D mesh or 2D image of clothing from an input image. The AI can create either high poly or low poly meshes, depending on user preference.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "output_format",
+      "resolution"
+    ],
+    "properties": {
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the image containing the clothing item to be converted into a 3D mesh or 2D image."
+      },
+      "resolution": {
+        "enum": [
+          "720p",
+          "1080p",
+          "4K"
+        ],
+        "type": "string",
+        "description": "The resolution of the input image. This helps the AI optimize the generation process."
+      },
+      "output_format": {
+        "enum": [
+          "high_poly",
+          "low_poly",
+          "image"
+        ],
+        "type": "string",
+        "description": "The desired output format: high_poly for a detailed mesh, low_poly for a simplified mesh, or image for a high-resolution 2D image of the clothing."
+      }
+    }
+  }
+}

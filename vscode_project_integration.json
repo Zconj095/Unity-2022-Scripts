@@ -1,0 +1,55 @@
+{
+  "name": "vscode_project_integration",
+  "description": "Integrates AI with Visual Studio Code projects to analyze and understand all code within a project hierarchy using analytics and directory reading.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "project_path",
+      "folder_id_mapping",
+      "code_analysis_options"
+    ],
+    "properties": {
+      "project_path": {
+        "type": "string",
+        "description": "The root path of the Visual Studio Code project directory."
+      },
+      "folder_id_mapping": {
+        "type": "object",
+        "required": [
+          "conversation_id",
+          "folder_path"
+        ],
+        "properties": {
+          "folder_path": {
+            "type": "string",
+            "description": "The relative path of the folder within the project associated with the conversation ID."
+          },
+          "conversation_id": {
+            "type": "string",
+            "description": "The unique ID for associating specific conversations with project folders."
+          }
+        },
+        "description": "Mapping of conversation IDs to specific folders in the project."
+      },
+      "code_analysis_options": {
+        "type": "object",
+        "required": [
+          "line_limit",
+          "include_subdirectories"
+        ],
+        "properties": {
+          "line_limit": {
+            "type": "integer",
+            "description": "The maximum number of lines of code to analyze in a single file."
+          },
+          "include_subdirectories": {
+            "type": "boolean",
+            "description": "Whether to include subdirectories in the analysis."
+          }
+        },
+        "description": "Options for code analysis, including line limits and subdirectory inclusion."
+      }
+    }
+  }
+}

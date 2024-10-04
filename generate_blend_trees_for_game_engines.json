@@ -1,0 +1,61 @@
+{
+  "name": "generate_blend_trees_for_game_engines",
+  "description": "Generates blend trees for game engines based on learned animations and character behaviors. The system processes animation data and outputs blend trees suitable for integration into game engines like Unity or Unreal Engine.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "character_name",
+      "game_engine",
+      "animation_types",
+      "blend_quality"
+    ],
+    "required": [
+      "animation_data"
+    ],
+    "properties": {
+      "game_engine": {
+        "enum": [
+          "Unity",
+          "Unreal Engine",
+          "Other"
+        ],
+        "type": "string",
+        "default": "Unity",
+        "description": "Specifies the game engine for which the blend trees are being generated."
+      },
+      "blend_quality": {
+        "enum": [
+          "standard",
+          "high",
+          "ultra"
+        ],
+        "type": "string",
+        "default": "standard",
+        "description": "Specifies the quality of the generated blend trees."
+      },
+      "animation_data": {
+        "type": "string",
+        "description": "The animation data or FBX files generated from analyzed anime or other sources."
+      },
+      "character_name": {
+        "type": "string",
+        "default": "all",
+        "description": "The name of the specific character for which to generate blend trees. If left blank, blend trees will be generated for all characters in the provided animation data."
+      },
+      "animation_types": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "default": [
+          "idle",
+          "walking",
+          "running",
+          "jumping"
+        ],
+        "description": "A list of animation types (e.g., walking, running, jumping) to include in the blend tree."
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "name": "3d_modeling_through_analytics",
+  "description": "Learns to create 3D models by analyzing data through pattern recognition and developing custom modeling systems for the user based on specific requirements.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "input_data",
+      "pattern_recognition_criteria",
+      "output_parameters"
+    ],
+    "properties": {
+      "input_data": {
+        "type": "object",
+        "required": [
+          "data_type",
+          "data_source"
+        ],
+        "properties": {
+          "data_type": {
+            "enum": [
+              "image",
+              "3d_model",
+              "video",
+              "other"
+            ],
+            "type": "string",
+            "description": "The type of data being analyzed for 3D modeling."
+          },
+          "data_source": {
+            "type": "string",
+            "description": "The source of the data (e.g., file path, URL, etc.)."
+          }
+        },
+        "description": "Details about the input data for pattern recognition and learning."
+      },
+      "output_parameters": {
+        "type": "object",
+        "required": [
+          "output_format",
+          "model_resolution"
+        ],
+        "properties": {
+          "output_format": {
+            "enum": [
+              "FBX",
+              "OBJ",
+              "STL",
+              "Blender",
+              "Maya"
+            ],
+            "type": "string",
+            "description": "The desired output format for the generated 3D model."
+          },
+          "model_resolution": {
+            "enum": [
+              "low_poly",
+              "high_poly"
+            ],
+            "type": "string",
+            "description": "The desired resolution of the 3D model."
+          },
+          "custom_requirements": {
+            "type": "string",
+            "description": "Any specific requirements or customization requests for the 3D model."
+          }
+        },
+        "description": "Parameters defining the output 3D model."
+      },
+      "pattern_recognition_criteria": {
+        "type": "object",
+        "required": [
+          "features_to_learn",
+          "modeling_techniques"
+        ],
+        "properties": {
+          "features_to_learn": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Specific features or patterns to recognize and learn from the data (e.g., edges, surfaces, textures, etc.)."
+            },
+            "description": "The list of features or patterns to recognize in the input data."
+          },
+          "modeling_techniques": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "Custom modeling techniques or approaches the AI should learn or develop (e.g., subdivision, sculpting, procedural generation, etc.)."
+            },
+            "description": "Techniques the AI should use to develop custom 3D models."
+          }
+        },
+        "description": "Criteria for pattern recognition and modeling techniques to be used in learning."
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "generate_ultra_high_quality_3d_model",
+  "description": "Generates an ultra-high-quality 3D model from a detailed image. The software supports images at 720p, 1080p, and up to 4K resolution, producing highly detailed models.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "output_format",
+      "resolution"
+    ],
+    "properties": {
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the image containing the object to be converted into an ultra-high-quality 3D model. The image should be 720p, 1080p, or 4K resolution for best results."
+      },
+      "resolution": {
+        "enum": [
+          "720p",
+          "1080p",
+          "4K"
+        ],
+        "type": "string",
+        "description": "The resolution of the input image. This helps the AI optimize the model generation process."
+      },
+      "output_format": {
+        "enum": [
+          "OBJ",
+          "FBX"
+        ],
+        "type": "string",
+        "description": "The desired output format for the 3D model (OBJ or FBX)."
+      }
+    }
+  }
+}

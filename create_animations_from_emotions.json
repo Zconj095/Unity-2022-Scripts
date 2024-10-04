@@ -1,0 +1,45 @@
+{
+  "name": "create_animations_from_emotions",
+  "description": "Generates new animations that correspond to a list of artificially created emotions, moods, and feelings.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "animation_style",
+      "output_format"
+    ],
+    "required": [
+      "emotion_list"
+    ],
+    "properties": {
+      "emotion_list": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of emotions, moods, and feelings that the AI will use as the basis for generating animations."
+      },
+      "output_format": {
+        "enum": [
+          "FBX",
+          "OBJ",
+          "MP4",
+          "GIF"
+        ],
+        "type": "string",
+        "default": "FBX",
+        "description": "Specifies the output format of the generated animation files."
+      },
+      "animation_style": {
+        "enum": [
+          "2D",
+          "3D",
+          "both"
+        ],
+        "type": "string",
+        "default": "both",
+        "description": "Specifies the style of animation to create: 2D, 3D, or both."
+      }
+    }
+  }
+}

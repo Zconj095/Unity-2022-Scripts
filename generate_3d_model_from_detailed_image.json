@@ -1,0 +1,26 @@
+{
+  "name": "generate_3d_model_from_detailed_image",
+  "description": "Takes a detailed image of an object and generates a 3D model of the object.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "image_url",
+      "output_format"
+    ],
+    "properties": {
+      "image_url": {
+        "type": "string",
+        "description": "The URL of the detailed image containing the object to be converted into a 3D model."
+      },
+      "output_format": {
+        "enum": [
+          "OBJ",
+          "FBX"
+        ],
+        "type": "string",
+        "description": "The desired output format for the 3D model (OBJ or FBX)."
+      }
+    }
+  }
+}

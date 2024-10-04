@@ -1,0 +1,33 @@
+{
+  "name": "ascm_file_learning_and_analysis",
+  "description": "Enables AI to decrypt (if permitted), process, and learn from eBooks in .ASCM format.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "ascm_file_path",
+      "learning_goals"
+    ],
+    "properties": {
+      "ascm_file_path": {
+        "type": "string",
+        "description": "Path to the .ASCM file that should be decrypted and analyzed."
+      },
+      "learning_goals": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Specific goals or areas of focus for learning (e.g., extracting key concepts, summarizing chapters, understanding domain-specific knowledge)."
+      },
+      "feedback_enabled": {
+        "type": "boolean",
+        "description": "Whether the AI should provide feedback on what it has learned and suggest insights based on the analysis."
+      },
+      "decryption_enabled": {
+        "type": "boolean",
+        "description": "Whether the AI should attempt to decrypt the .ASCM file if legal decryption methods are available."
+      }
+    }
+  }
+}

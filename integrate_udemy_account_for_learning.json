@@ -1,0 +1,46 @@
+{
+  "name": "integrate_udemy_account_for_learning",
+  "description": "Integrates a personal Udemy account with the AI, allowing it to learn from video and audio content of paid courses.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "udemy_account_email",
+      "udemy_account_password",
+      "courses_to_integrate"
+    ],
+    "properties": {
+      "learning_mode": {
+        "enum": [
+          "video_only",
+          "audio_only",
+          "video_and_audio",
+          "full_content"
+        ],
+        "type": "string",
+        "description": "Specifies the type of content the AI should focus on learning: videos, audio, or both."
+      },
+      "learning_goals": {
+        "type": "string",
+        "description": "Specific learning objectives or goals the AI should focus on while processing the courses."
+      },
+      "udemy_account_email": {
+        "type": "string",
+        "description": "The email address associated with the user's Udemy account."
+      },
+      "courses_to_integrate": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "description": "The specific courses from which the AI should learn."
+        },
+        "description": "A list of course titles or IDs that the AI should integrate and learn from."
+      },
+      "udemy_account_password": {
+        "type": "string",
+        "format": "password",
+        "description": "The password for the user's Udemy account."
+      }
+    }
+  }
+}

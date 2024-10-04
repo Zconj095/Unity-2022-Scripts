@@ -1,0 +1,49 @@
+{
+  "name": "combine_emotions_with_media",
+  "description": "Combines different forms of emphasis, outer expressions, and emotions with audio (MP3) and visual (FBX) elements based on an artificial list.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "audio_file",
+      "animation_style",
+      "output_format"
+    ],
+    "required": [
+      "emotion_list"
+    ],
+    "properties": {
+      "audio_file": {
+        "type": "string",
+        "default": "background_music.mp3",
+        "description": "The path to the MP3 file that will be combined with the generated visual animation."
+      },
+      "emotion_list": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of emotions, outer expressions, and emphasis types that the AI will use to generate combined media outputs."
+      },
+      "output_format": {
+        "enum": [
+          "FBX",
+          "MP4"
+        ],
+        "type": "string",
+        "default": "FBX",
+        "description": "Specifies the output format of the generated animation files."
+      },
+      "animation_style": {
+        "enum": [
+          "2D",
+          "3D",
+          "both"
+        ],
+        "type": "string",
+        "default": "3D",
+        "description": "Specifies the style of animation to create: 2D, 3D, or both."
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "learn_emphasis",
+  "description": "Analyzes text or speech input to detect and learn emphasis.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "text_input"
+    ],
+    "properties": {
+      "text_input": {
+        "type": "string",
+        "description": "The text input where emphasis will be detected, such as capitalized words, punctuation, or repetition."
+      },
+      "audio_input": {
+        "type": "string",
+        "description": "The audio input, in base64 format, where speech emphasis will be detected. This is optional."
+      }
+    }
+  }
+}

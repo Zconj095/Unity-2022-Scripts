@@ -1,0 +1,40 @@
+{
+  "name": "classify_emphasis_from_text",
+  "description": "Classifies emphasis within a text, identifying the intensity and emotional weight of words or phrases based on the context and tone of the content.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "classification_type",
+      "output_format"
+    ],
+    "required": [
+      "text_input"
+    ],
+    "properties": {
+      "text_input": {
+        "type": "string",
+        "description": "The text in which to classify emphasis and identify key elements with varying levels of intensity."
+      },
+      "output_format": {
+        "enum": [
+          "detailed",
+          "summary"
+        ],
+        "type": "string",
+        "default": "detailed",
+        "description": "Specifies whether to return a detailed classification with explanations or a summary of the emphasis."
+      },
+      "classification_type": {
+        "enum": [
+          "intensity",
+          "emotional_weight",
+          "both"
+        ],
+        "type": "string",
+        "default": "both",
+        "description": "Specifies the type of emphasis classification to perform: intensity of the expression, emotional weight, or both."
+      }
+    }
+  }
+}

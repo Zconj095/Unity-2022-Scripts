@@ -1,0 +1,29 @@
+{
+  "name": "learn_outer_emotions",
+  "description": "Analyzes image, video, or audio input to detect and learn outer emotions, which are emotions expressed externally through facial expressions, body language, and tone of voice.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "video_input",
+      "audio_input"
+    ],
+    "required": [
+      "image_input"
+    ],
+    "properties": {
+      "audio_input": {
+        "type": "string",
+        "description": "The audio input, in base64 format, containing the speech to analyze for tone and emotional expression. This is optional."
+      },
+      "image_input": {
+        "type": "string",
+        "description": "The image input, in base64 format, showing the outer emotions to be analyzed."
+      },
+      "video_input": {
+        "type": "string",
+        "description": "The video input, in base64 format, showing the outer emotions to be analyzed. This is optional."
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "learn_from_non_text_data",
+  "description": "Allows the AI to perform pattern recognition and frequency analysis on non-text data, such as MP4 files, to learn from different emotional contexts, emphasis, and specific trades or skills.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "file_path",
+      "learning_objectives"
+    ],
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "The path to the non-text file (e.g., MP4) that the AI should process."
+      },
+      "analysis_mode": {
+        "enum": [
+          "offline",
+          "online"
+        ],
+        "type": "string",
+        "description": "Specifies whether the AI should process the file on an offline or online machine."
+      },
+      "output_format": {
+        "enum": [
+          "patterns_only",
+          "full_analysis",
+          "summary"
+        ],
+        "type": "string",
+        "description": "Defines the format of the output: just patterns detected, a full analysis, or a summarized version."
+      },
+      "learning_objectives": {
+        "type": "string",
+        "description": "Specific goals for what the AI should learn from the file, such as emotional context, emphasis, or technical skills."
+      }
+    }
+  }
+}

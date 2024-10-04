@@ -1,0 +1,43 @@
+{
+  "name": "learn_philosophies_from_anime",
+  "description": "Extracts and learns philosophical concepts, themes, and ideas from anime content. The system analyzes the narrative, dialogue, and character development within anime to identify and understand philosophical elements.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "optional": [
+      "philosophy_type",
+      "output_format"
+    ],
+    "required": [
+      "anime_data"
+    ],
+    "properties": {
+      "anime_data": {
+        "type": "string",
+        "description": "The anime content in a format suitable for analysis. This could be encoded video data, transcripts, or detailed summaries."
+      },
+      "output_format": {
+        "enum": [
+          "summary",
+          "detailed_analysis",
+          "quotes"
+        ],
+        "type": "string",
+        "default": "summary",
+        "description": "Specifies how the learned philosophy should be output: as a summary, detailed analysis, or extracted quotes."
+      },
+      "philosophy_type": {
+        "enum": [
+          "existentialism",
+          "stoicism",
+          "nihilism",
+          "humanism",
+          "general"
+        ],
+        "type": "string",
+        "default": "general",
+        "description": "Specifies the type of philosophy the system should focus on learning. 'General' allows the system to learn any philosophical concepts present in the anime."
+      }
+    }
+  }
+}

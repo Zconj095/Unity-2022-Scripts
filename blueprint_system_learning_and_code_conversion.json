@@ -1,0 +1,70 @@
+{
+  "name": "blueprint_system_learning_and_code_conversion",
+  "description": "Learns Blueprint systems from Unreal Engine and Unity, understanding how to create Blueprints through C++ and C#, and assists in generating or converting between Blueprints and code.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "blueprint_data",
+      "conversion_parameters",
+      "learning_goal"
+    ],
+    "properties": {
+      "learning_goal": {
+        "enum": [
+          "LearnBlueprints",
+          "LearnCodeConversion"
+        ],
+        "type": "string",
+        "description": "Specifies whether the focus is on learning Blueprints or converting between Blueprints and code."
+      },
+      "blueprint_data": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "required": [
+            "engine",
+            "blueprint_or_code"
+          ],
+          "properties": {
+            "engine": {
+              "enum": [
+                "UnrealEngine",
+                "Unity"
+              ],
+              "type": "string",
+              "description": "The game engine from which the Blueprint or script data is provided."
+            },
+            "blueprint_or_code": {
+              "type": "string",
+              "description": "The actual Blueprint data or script code to be analyzed and learned from."
+            }
+          }
+        },
+        "description": "A list of Blueprints or scripts from Unreal Engine or Unity used for learning the system."
+      },
+      "conversion_parameters": {
+        "type": "object",
+        "required": [
+          "target_language",
+          "input_data"
+        ],
+        "properties": {
+          "input_data": {
+            "type": "string",
+            "description": "The Blueprint or script to be converted."
+          },
+          "target_language": {
+            "enum": [
+              "C++",
+              "C#",
+              "Blueprint"
+            ],
+            "type": "string",
+            "description": "The target language or system to convert the Blueprint or script into."
+          }
+        }
+      }
+    }
+  }
+}
