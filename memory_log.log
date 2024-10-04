@@ -1,0 +1,27 @@
+2024-08-10 16:36:54 - INFO - This is an informational message.
+2024-08-10 16:36:54 - ERROR - This is an error message.
+2024-08-10 16:36:54 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:36:54 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:36:54 - INFO - Event: Creation, Location: Short-Term Memory, File: short_term_memory.keras, Function: create_and_save_memory
+2024-08-10 16:36:54 - INFO - This is an informational message.
+2024-08-10 16:36:54 - ERROR - This is an error message.
+2024-08-10 16:36:54 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:36:54 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:38:16 - INFO - This is an informational message.
+2024-08-10 16:38:16 - ERROR - This is an error message.
+2024-08-10 16:38:16 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:38:16 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:38:16 - INFO - Event: Creation, Location: Short-Term Memory, File: short_term_memory.keras, Function: create_and_save_memory
+2024-08-10 16:38:16 - INFO - This is an informational message.
+2024-08-10 16:38:16 - ERROR - This is an error message.
+2024-08-10 16:38:16 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:38:16 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:46:45 - INFO - This is an informational message.
+2024-08-10 16:46:45 - ERROR - This is an error message.
+2024-08-10 16:46:45 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:46:45 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:46:45 - INFO - Event: Creation, Location: Short-Term Memory, File: short_term_memory.keras, Function: create_and_save_memory
+2024-08-10 16:46:45 - INFO - This is an informational message.
+2024-08-10 16:46:45 - ERROR - This is an error message.
+2024-08-10 16:46:45 - INFO - Event: Creation, Location: Long-Term Memory, File: long_term_memory.h5
+2024-08-10 16:46:45 - INFO - Event: Retrieval, Location: Long-Term Memory, File: long_term_memory.h5
