@@ -1,0 +1,38 @@
+[NEAT]
+pop_size = 10
+reset_on_extinction = True
+
+[DefaultGenome]
+# Node types
+node_significance = 1
+# Connection genes
+conn_add_prob = 0.5
+conn_delete_prob = 0.5
+# Node genes
+node_add_prob = 0.2
+node_delete_prob = 0.2
+# Connection weight mutation
+weight_mutate_power = 0.5
+# Node response mutation
+response_mutate_power = 0.5
+# Connection add/remove mutation
+conn_mutate_power = 0.2
+# Node add/remove mutation
+node_mutate_power = 0.2
+# Crossover
+cross_prob = 0.75
+# Compatibility threshold
+compatibility_threshold = 3.0
+# Crossover offspring survival threshold
+survival_threshold = 0.2
+
+[DefaultReproduction]
+elitism = 1
+
+[DefaultSpeciesSet]
+compatibility_threshold = 3.0
+
+[DefaultStagnation]
+species_fitness_func = max
+max_stagnation = 20
+species_elitism = 2
