@@ -1,0 +1,32 @@
+{
+  "name": "collect_user_data",
+  "description": "Collects user data related to their emotional, physical, cognitive, and environmental states.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "emotional_state",
+      "physical_sensation",
+      "cognitive_patterns",
+      "environmental_factors"
+    ],
+    "properties": {
+      "emotional_state": {
+        "type": "string",
+        "description": "The user's current emotional state."
+      },
+      "cognitive_patterns": {
+        "type": "string",
+        "description": "The user's current thought patterns."
+      },
+      "physical_sensation": {
+        "type": "string",
+        "description": "Any significant physical sensations the user is experiencing."
+      },
+      "environmental_factors": {
+        "type": "string",
+        "description": "The user's current environment and its influence on their state."
+      }
+    }
+  }
+}

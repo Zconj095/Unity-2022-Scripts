@@ -1,0 +1,48 @@
+{
+  "name": "analyze_mood_energy_balance",
+  "description": "Analyzes the balance between mood and energy based on provided data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "mood_data",
+      "energy_data"
+    ],
+    "properties": {
+      "mood_data": {
+        "type": "object",
+        "required": [
+          "current_mood",
+          "stability"
+        ],
+        "properties": {
+          "stability": {
+            "type": "string",
+            "description": "The stability of the user's mood."
+          },
+          "current_mood": {
+            "type": "string",
+            "description": "The user's current mood."
+          }
+        }
+      },
+      "energy_data": {
+        "type": "object",
+        "required": [
+          "chi_level",
+          "aura_state"
+        ],
+        "properties": {
+          "chi_level": {
+            "type": "string",
+            "description": "The user's chi (energy) level."
+          },
+          "aura_state": {
+            "type": "string",
+            "description": "The state of the user's aura."
+          }
+        }
+      }
+    }
+  }
+}

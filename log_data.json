@@ -1,0 +1,17 @@
+{
+  "name": "log_data",
+  "description": "Log data for future analysis and record-keeping.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "data"
+    ],
+    "properties": {
+      "data": {
+        "type": "object",
+        "description": "Data to be logged."
+      }
+    }
+  }
+}

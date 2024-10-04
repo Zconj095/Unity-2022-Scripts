@@ -1,0 +1,21 @@
+{
+  "name": "interact_with_health_dashboard",
+  "description": "Displays a user's health and wellness data in a structured dashboard format, providing a clear overview of various health metrics.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_health_data"
+    ],
+    "properties": {
+      "user_health_data": {
+        "type": "object",
+        "description": "A dictionary of health metrics and their respective values.",
+        "additionalProperties": {
+          "type": "number",
+          "description": "Values associated with various health metrics, such as blood pressure, heart rate, etc."
+        }
+      }
+    }
+  }
+}

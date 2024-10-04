@@ -1,0 +1,10 @@
+{
+  "name": "read_environmental_data",
+  "description": "Simulates reading environmental data like temperature and air quality from sensors.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [],
+    "properties": {}
+  }
+}

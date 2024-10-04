@@ -1,0 +1,24 @@
+{
+  "name": "calculate_biorhythms",
+  "description": "Calculates and displays a comprehensive set of biorhythms for a given date based on the individual's birth date and time. This includes the season, moon phase, solar cycle phase, and circadian tendency.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "date",
+      "birth_date"
+    ],
+    "properties": {
+      "date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The current date and time for which to calculate biorhythms, formatted as 'YYYY-MM-DDTHH:MM:SS'."
+      },
+      "birth_date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The individual's birth date and time, used for calculating biorhythms, formatted as 'YYYY-MM-DDTHH:MM:SS'."
+      }
+    }
+  }
+}

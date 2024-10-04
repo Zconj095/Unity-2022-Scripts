@@ -1,0 +1,44 @@
+{
+  "name": "calculate_hormone_levels_based_on_astronomical_phases",
+  "description": "Estimates hormone levels based on the moon phase and sun cycle phase, using simplified models to demonstrate potential hormonal changes due to astronomical phenomena.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "date",
+      "moon_phase",
+      "sun_cycle_phase"
+    ],
+    "properties": {
+      "date": {
+        "type": "string",
+        "format": "date-time",
+        "description": "The date for which to calculate the hormone levels, formatted as 'YYYY-MM-DDTHH:MM:SS'."
+      },
+      "moon_phase": {
+        "enum": [
+          "New Moon",
+          "Waxing Crescent",
+          "First Quarter",
+          "Waxing Gibbous",
+          "Full Moon",
+          "Waning Gibbous",
+          "Last Quarter",
+          "Waning Crescent"
+        ],
+        "type": "string",
+        "description": "The current moon phase."
+      },
+      "sun_cycle_phase": {
+        "enum": [
+          "Rising Phase",
+          "Solar Maximum",
+          "Declining Phase",
+          "Solar Minimum"
+        ],
+        "type": "string",
+        "description": "The current phase of the solar cycle."
+      }
+    }
+  }
+}

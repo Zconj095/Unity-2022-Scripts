@@ -1,0 +1,35 @@
+{
+  "name": "generate_health_recommendations",
+  "description": "Generates personalized health recommendations based on user activity and health data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_data"
+    ],
+    "properties": {
+      "user_data": {
+        "type": "object",
+        "required": [
+          "activity_level",
+          "hydration",
+          "sleep_quality"
+        ],
+        "properties": {
+          "hydration": {
+            "type": "string",
+            "description": "Current hydration status."
+          },
+          "sleep_quality": {
+            "type": "integer",
+            "description": "Numeric representation of sleep quality."
+          },
+          "activity_level": {
+            "type": "string",
+            "description": "The user's overall activity level."
+          }
+        }
+      }
+    }
+  }
+}

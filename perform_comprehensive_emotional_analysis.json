@@ -1,0 +1,51 @@
+{
+  "name": "perform_comprehensive_emotional_analysis",
+  "description": "Performs a detailed emotional state analysis based on the user's emotional data and preferences.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "emotional_data",
+      "user_preferences"
+    ],
+    "properties": {
+      "emotional_data": {
+        "type": "object",
+        "required": [
+          "mood_spectrum",
+          "stress_levels"
+        ],
+        "properties": {
+          "mood_spectrum": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A spectrum of the user's current mood states."
+          },
+          "stress_levels": {
+            "type": "string",
+            "description": "The user's current stress levels."
+          }
+        }
+      },
+      "user_preferences": {
+        "type": "object",
+        "required": [
+          "analysis_depth",
+          "feedback_frequency"
+        ],
+        "properties": {
+          "analysis_depth": {
+            "type": "string",
+            "description": "The depth of analysis required (e.g., 'detailed', 'basic')."
+          },
+          "feedback_frequency": {
+            "type": "string",
+            "description": "The frequency at which the user prefers to receive feedback (e.g., 'daily', 'weekly')."
+          }
+        }
+      }
+    }
+  }
+}

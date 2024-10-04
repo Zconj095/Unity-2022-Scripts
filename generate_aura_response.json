@@ -1,0 +1,25 @@
+{
+  "name": "generate_aura_response",
+  "description": "Generates a descriptive response based on the modeled aura.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "aura_model"
+    ],
+    "properties": {
+      "aura_model": {
+        "type": "object",
+        "required": [
+          "color_brightness"
+        ],
+        "properties": {
+          "color_brightness": {
+            "type": "number",
+            "description": "The brightness of the user's aura."
+          }
+        }
+      }
+    }
+  }
+}

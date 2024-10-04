@@ -1,0 +1,28 @@
+{
+  "name": "analyze_aura",
+  "description": "Analyzes aura based on sensor data provided.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "sensor_data"
+    ],
+    "properties": {
+      "sensor_data": {
+        "type": "object",
+        "required": [
+          "em_field_readings"
+        ],
+        "properties": {
+          "em_field_readings": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "description": "Electromagnetic field readings collected from sensors."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "interact_with_iot_health_monitor",
+  "description": "Interacts with a system that collects and analyzes data from IoT health devices to provide health insights.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "device_data"
+    ],
+    "properties": {
+      "device_data": {
+        "type": "object",
+        "required": [
+          "smart_scale",
+          "smart_mirror"
+        ],
+        "properties": {
+          "smart_scale": {
+            "type": "object",
+            "required": [
+              "weight_data"
+            ],
+            "properties": {
+              "weight_data": {
+                "type": "string",
+                "description": "Data collected from the smart scale, typically including weight measurements."
+              }
+            }
+          },
+          "smart_mirror": {
+            "type": "object",
+            "required": [
+              "posture_data"
+            ],
+            "properties": {
+              "posture_data": {
+                "type": "string",
+                "description": "Data collected from the smart mirror, typically including posture analysis results."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

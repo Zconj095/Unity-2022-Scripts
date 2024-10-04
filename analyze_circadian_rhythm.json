@@ -1,0 +1,48 @@
+{
+  "name": "analyze_circadian_rhythm",
+  "description": "Analyzes circadian rhythms based on provided sleep and activity data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "sleep_data",
+      "activity_data"
+    ],
+    "properties": {
+      "sleep_data": {
+        "type": "object",
+        "required": [
+          "total_sleep",
+          "sleep_quality"
+        ],
+        "properties": {
+          "total_sleep": {
+            "type": "number",
+            "description": "The total hours of sleep."
+          },
+          "sleep_quality": {
+            "type": "number",
+            "description": "The quality of sleep on a scale from 0 to 100."
+          }
+        }
+      },
+      "activity_data": {
+        "type": "object",
+        "required": [
+          "daily_steps",
+          "active_hours"
+        ],
+        "properties": {
+          "daily_steps": {
+            "type": "integer",
+            "description": "The number of steps taken daily."
+          },
+          "active_hours": {
+            "type": "number",
+            "description": "The number of hours spent being physically active."
+          }
+        }
+      }
+    }
+  }
+}

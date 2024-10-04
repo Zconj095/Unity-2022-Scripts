@@ -1,0 +1,40 @@
+{
+  "name": "update_personality_profile",
+  "description": "Processes and stores personality data for a specific user, updating their personality profile.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_id",
+      "personality_data"
+    ],
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "description": "The ID of the user whose personality profile is being updated."
+      },
+      "personality_data": {
+        "type": "object",
+        "required": [
+          "enneagram_type",
+          "MBTI",
+          "zodiac_sign"
+        ],
+        "properties": {
+          "MBTI": {
+            "type": "string",
+            "description": "The user's Myers-Briggs Type Indicator (MBTI)."
+          },
+          "zodiac_sign": {
+            "type": "string",
+            "description": "The user's zodiac sign."
+          },
+          "enneagram_type": {
+            "type": "string",
+            "description": "The user's Enneagram type."
+          }
+        }
+      }
+    }
+  }
+}

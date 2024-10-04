@@ -1,0 +1,56 @@
+{
+  "name": "analyze_emotion_interaction",
+  "description": "Analyzes the interaction of an emotion with its related emotions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "emotion"
+    ],
+    "properties": {
+      "emotion": {
+        "type": "object",
+        "required": [
+          "name",
+          "intensity",
+          "impact_on_behavior"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the primary emotion."
+          },
+          "intensity": {
+            "type": "integer",
+            "description": "The intensity of the emotion."
+          },
+          "related_emotions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the related emotion."
+                },
+                "intensity": {
+                  "type": "integer",
+                  "description": "The intensity of the related emotion."
+                },
+                "impact_on_behavior": {
+                  "type": "string",
+                  "description": "The impact of the related emotion on behavior."
+                }
+              }
+            },
+            "description": "A list of related emotions."
+          },
+          "impact_on_behavior": {
+            "type": "string",
+            "description": "The impact of the emotion on behavior."
+          }
+        }
+      }
+    }
+  }
+}

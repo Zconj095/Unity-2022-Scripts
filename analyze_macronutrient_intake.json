@@ -1,0 +1,30 @@
+{
+  "name": "analyze_macronutrient_intake",
+  "description": "Analyzes macronutrient intake from provided nutritional data, giving feedback on protein and carbohydrate levels.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "nutritional_data"
+    ],
+    "properties": {
+      "nutritional_data": {
+        "type": "object",
+        "required": [
+          "protein",
+          "carbs"
+        ],
+        "properties": {
+          "carbs": {
+            "type": "number",
+            "description": "The amount of carbohydrates (in grams) consumed."
+          },
+          "protein": {
+            "type": "number",
+            "description": "The amount of protein (in grams) consumed."
+          }
+        }
+      }
+    }
+  }
+}

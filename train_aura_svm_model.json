@@ -1,0 +1,31 @@
+{
+  "name": "train_aura_svm_model",
+  "description": "Trains an SVM model on features extracted from user data to predict aura characteristics.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "X_train",
+      "y_train"
+    ],
+    "properties": {
+      "X_train": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "description": "Training data features."
+      },
+      "y_train": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Training data labels."
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "analyze_feeling_interactions",
+  "description": "Analyzes the interactions of a feeling with its related feelings.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "feeling"
+    ],
+    "properties": {
+      "feeling": {
+        "type": "object",
+        "required": [
+          "description",
+          "cause"
+        ],
+        "properties": {
+          "cause": {
+            "type": "string",
+            "description": "The cause of the primary feeling."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the primary feeling."
+          },
+          "related_feelings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "cause": {
+                  "type": "string",
+                  "description": "The cause of the related feeling."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "The description of the related feeling."
+                }
+              }
+            },
+            "description": "A list of related feelings."
+          }
+        }
+      }
+    }
+  }
+}

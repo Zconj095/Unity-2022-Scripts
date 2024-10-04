@@ -1,0 +1,30 @@
+{
+  "name": "detect_health_anomalies",
+  "description": "Detects anomalies in user health data and provides relevant health alerts.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_health_data"
+    ],
+    "properties": {
+      "user_health_data": {
+        "type": "object",
+        "required": [
+          "heart_rate",
+          "activity_level"
+        ],
+        "properties": {
+          "heart_rate": {
+            "type": "integer",
+            "description": "The user's heart rate, measured in beats per minute."
+          },
+          "activity_level": {
+            "type": "string",
+            "description": "The user's current activity level during the measurement."
+          }
+        }
+      }
+    }
+  }
+}

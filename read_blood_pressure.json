@@ -1,0 +1,10 @@
+{
+  "name": "read_blood_pressure",
+  "description": "Simulates reading blood pressure data from a sensor.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [],
+    "properties": {}
+  }
+}

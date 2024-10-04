@@ -1,0 +1,18 @@
+{
+  "name": "calculate_biorhythms_and_moon_phase",
+  "description": "Calculates the moon phase and biorhythms for a specified date using astronomical calculations.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "date"
+    ],
+    "properties": {
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date for which to calculate the moon phase and biorhythms, formatted as 'YYYY-MM-DD'."
+      }
+    }
+  }
+}

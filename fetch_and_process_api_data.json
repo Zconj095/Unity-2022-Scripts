@@ -1,0 +1,21 @@
+{
+  "name": "fetch_and_process_api_data",
+  "description": "Fetches data from a specified API endpoint, processes it, and stores it in the system database.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "api_endpoint"
+    ],
+    "properties": {
+      "raw_data": {
+        "type": "string",
+        "description": "The raw data fetched from the API endpoint."
+      },
+      "api_endpoint": {
+        "type": "string",
+        "description": "The API endpoint from which to fetch data."
+      }
+    }
+  }
+}

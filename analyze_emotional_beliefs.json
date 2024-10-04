@@ -1,0 +1,46 @@
+{
+  "name": "analyze_emotional_beliefs",
+  "description": "Analyzes emotional state and belief patterns based on the provided emotional and belief data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "emotional_data",
+      "belief_data"
+    ],
+    "properties": {
+      "belief_data": {
+        "type": "object",
+        "required": [
+          "subconscious_beliefs"
+        ],
+        "properties": {
+          "subconscious_beliefs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of subconscious beliefs affecting the user's mental state."
+          }
+        }
+      },
+      "emotional_data": {
+        "type": "object",
+        "required": [
+          "mood",
+          "energy_level"
+        ],
+        "properties": {
+          "mood": {
+            "type": "string",
+            "description": "The user's current mood."
+          },
+          "energy_level": {
+            "type": "string",
+            "description": "The user's current energy level."
+          }
+        }
+      }
+    }
+  }
+}

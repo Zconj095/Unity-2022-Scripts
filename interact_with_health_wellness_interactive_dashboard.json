@@ -1,0 +1,51 @@
+{
+  "name": "interact_with_health_wellness_interactive_dashboard",
+  "description": "Creates and interacts with an interactive health and wellness dashboard that integrates various health metrics and allows users to display detailed views and historical trends for specific metrics such as biorhythms and hormone levels.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_info",
+      "dashboard_action"
+    ],
+    "properties": {
+      "metric": {
+        "enum": [
+          "biorhythms",
+          "hormone_levels"
+        ],
+        "type": "string",
+        "description": "Specific metric for which to display detailed view and historical trends."
+      },
+      "user_info": {
+        "type": "object",
+        "required": [
+          "name",
+          "birth_datetime"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user."
+          },
+          "birth_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The user's date and time of birth used for personalized health tracking, formatted as 'YYYY-MM-DDTHH:MM:SS'."
+          }
+        }
+      },
+      "dashboard_action": {
+        "enum": [
+          "update",
+          "display",
+          "recommend",
+          "track_progress",
+          "display_detailed_view"
+        ],
+        "type": "string",
+        "description": "The action to perform on the dashboard: update metrics, display dashboard, provide health recommendations, track progress, or display detailed views."
+      }
+    }
+  }
+}

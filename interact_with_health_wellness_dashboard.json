@@ -1,0 +1,37 @@
+{
+  "name": "interact_with_health_wellness_dashboard",
+  "description": "Interacts with a virtual health and wellness dashboard that consolidates various health metrics, including biorhythms, hormone levels, nutritional and physiological data, mental wellbeing, and environmental factors, providing a comprehensive view and personalized recommendations.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_info",
+      "action"
+    ],
+    "properties": {
+      "action": {
+        "enum": [
+          "update",
+          "display",
+          "recommend",
+          "track_progress"
+        ],
+        "type": "string",
+        "description": "The action to perform: update metrics, display dashboard, provide health recommendations, or track progress towards goals."
+      },
+      "user_info": {
+        "type": "object",
+        "required": [
+          "birth_datetime"
+        ],
+        "properties": {
+          "birth_datetime": {
+            "type": "string",
+            "format": "date-time",
+            "description": "The user's date and time of birth used for personalized health tracking."
+          }
+        }
+      }
+    }
+  }
+}

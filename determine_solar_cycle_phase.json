@@ -1,0 +1,18 @@
+{
+  "name": "determine_solar_cycle_phase",
+  "description": "Determines the approximate phase of the solar cycle based on the current date. The solar cycle is simplified and divided into four phases: Rising Phase, Solar Maximum, Declining Phase, and Solar Minimum.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "current_date"
+    ],
+    "properties": {
+      "current_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The current date for which to determine the solar cycle phase, formatted as 'YYYY-MM-DD'."
+      }
+    }
+  }
+}

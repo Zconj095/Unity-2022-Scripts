@@ -1,0 +1,22 @@
+{
+  "name": "describe_feeling",
+  "description": "Describes a feeling based on its subjective experience and cause.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "description",
+      "cause"
+    ],
+    "properties": {
+      "cause": {
+        "type": "string",
+        "description": "The cause or trigger of this feeling."
+      },
+      "description": {
+        "type": "string",
+        "description": "A description of the feeling (e.g., Sense of contentment, Feeling of unease)."
+      }
+    }
+  }
+}

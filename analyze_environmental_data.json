@@ -1,0 +1,30 @@
+{
+  "name": "analyze_environmental_data",
+  "description": "Analyzes environmental data to assess temperature and air quality.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "data"
+    ],
+    "properties": {
+      "data": {
+        "type": "object",
+        "required": [
+          "temperature",
+          "air_quality_index"
+        ],
+        "properties": {
+          "temperature": {
+            "type": "number",
+            "description": "Temperature in degrees Celsius."
+          },
+          "air_quality_index": {
+            "type": "integer",
+            "description": "Air quality index (0 = good, 500 = hazardous)."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "analyze_aura_again",
+  "description": "Analyze the aura based on heart rate, stress level, and environmental data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "heart_rate",
+      "stress_level",
+      "environmental_data"
+    ],
+    "properties": {
+      "heart_rate": {
+        "type": "integer",
+        "description": "The heart rate in beats per minute."
+      },
+      "stress_level": {
+        "type": "integer",
+        "description": "The stress level on a scale from 0 to 100."
+      },
+      "environmental_data": {
+        "type": "object",
+        "required": [
+          "temperature",
+          "air_quality_index"
+        ],
+        "properties": {
+          "temperature": {
+            "type": "number",
+            "description": "Temperature in degrees Celsius."
+          },
+          "air_quality_index": {
+            "type": "integer",
+            "description": "Air quality index (0 = good, 500 = hazardous)."
+          }
+        }
+      }
+    }
+  }
+}

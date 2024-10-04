@@ -1,0 +1,10 @@
+{
+  "name": "read_heart_rate",
+  "description": "Simulates reading heart rate data from a sensor.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [],
+    "properties": {}
+  }
+}

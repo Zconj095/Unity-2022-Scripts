@@ -1,0 +1,48 @@
+{
+  "name": "analyze_user_state",
+  "description": "Analyzes the user's emotional and mood state to generate insights.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_emotion",
+      "user_mood"
+    ],
+    "properties": {
+      "user_mood": {
+        "type": "object",
+        "required": [
+          "name",
+          "duration"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user's current mood."
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the user's current mood."
+          }
+        }
+      },
+      "user_emotion": {
+        "type": "object",
+        "required": [
+          "name",
+          "impact_on_behavior"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user's current emotion."
+          },
+          "impact_on_behavior": {
+            "type": "string",
+            "description": "The impact of the user's current emotion on their behavior."
+          }
+        }
+      }
+    }
+  }
+}

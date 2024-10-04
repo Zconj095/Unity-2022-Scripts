@@ -1,0 +1,20 @@
+{
+  "name": "simulate_quantum_computation",
+  "description": "Simulates the conversion of a classical data vector into a quantum state using a simplified quantum circuit model and performs basic quantum operations, such as applying a CNOT gate.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "data_vector"
+    ],
+    "properties": {
+      "data_vector": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "A normalized classical vector intended for quantum state preparation. Length must be a power of 2."
+      }
+    }
+  }
+}

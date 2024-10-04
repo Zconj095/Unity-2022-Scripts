@@ -1,0 +1,22 @@
+{
+  "name": "track_user_progress",
+  "description": "Tracks and displays a user's progress towards their set health goals.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_name",
+      "goal"
+    ],
+    "properties": {
+      "goal": {
+        "type": "string",
+        "description": "The specific health goal set by the user."
+      },
+      "user_name": {
+        "type": "string",
+        "description": "The name of the user whose progress is being tracked."
+      }
+    }
+  }
+}

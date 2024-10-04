@@ -1,0 +1,64 @@
+{
+  "name": "calculate_digital_flux_ambiance",
+  "description": "Calculates the Digital Flux Ambiance (DFA) from given inputs including intensity, density, external influences, and exponent parameters using CuPy.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "HFP",
+      "lambda_val",
+      "I",
+      "D",
+      "E",
+      "a",
+      "b",
+      "c"
+    ],
+    "properties": {
+      "D": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Density of the hyperparameters in the environment."
+      },
+      "E": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "External influences on the environment."
+      },
+      "I": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Intensity of the ambient digital or magical field."
+      },
+      "a": {
+        "type": "number",
+        "description": "Exponent parameter for I."
+      },
+      "b": {
+        "type": "number",
+        "description": "Exponent parameter for D."
+      },
+      "c": {
+        "type": "number",
+        "description": "Exponent parameter for E."
+      },
+      "HFP": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Hyperroot Flux Parameter, a previously calculated CuPy array."
+      },
+      "lambda_val": {
+        "type": "number",
+        "description": "Scaling factor for ambient conditions."
+      }
+    }
+  }
+}

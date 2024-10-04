@@ -1,0 +1,42 @@
+{
+  "name": "train_and_predict_lstm",
+  "description": "Trains an LSTM model on generated synthetic time series data and makes predictions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "timesteps",
+      "data_dim"
+    ],
+    "properties": {
+      "epochs": {
+        "type": "integer",
+        "default": 20,
+        "description": "Number of training epochs for the LSTM model."
+      },
+      "data_dim": {
+        "type": "integer",
+        "description": "Number of simulated glyphs (features) at each time step."
+      },
+      "timesteps": {
+        "type": "integer",
+        "description": "Number of time steps in each sequence."
+      },
+      "batch_size": {
+        "type": "integer",
+        "default": 72,
+        "description": "Batch size for training the LSTM model."
+      },
+      "num_samples": {
+        "type": "integer",
+        "default": 1000,
+        "description": "Total number of samples in the dataset."
+      },
+      "validation_split": {
+        "type": "number",
+        "default": 0.2,
+        "description": "Fraction of the data to be used as validation data."
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "train_lstm_model_on_synthetic_data",
+  "description": "Trains an LSTM model on synthetic data generated according to specified parameters, normalizes the data, and evaluates the model's performance across specified epochs.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "n_samples",
+      "seq_length",
+      "input_size",
+      "hidden_layer_size",
+      "output_size",
+      "epochs"
+    ],
+    "properties": {
+      "epochs": {
+        "type": "integer",
+        "default": 150,
+        "description": "Number of training epochs."
+      },
+      "n_samples": {
+        "type": "integer",
+        "default": 1000,
+        "description": "Number of samples to generate for the synthetic data."
+      },
+      "input_size": {
+        "type": "integer",
+        "default": 10,
+        "description": "Number of input features for the LSTM model."
+      },
+      "seq_length": {
+        "type": "integer",
+        "default": 10,
+        "description": "Length of each sequence in the synthetic data."
+      },
+      "output_size": {
+        "type": "integer",
+        "default": 1,
+        "description": "Output size of the LSTM model."
+      },
+      "learning_rate": {
+        "type": "number",
+        "default": 0.001,
+        "description": "Learning rate for the optimizer."
+      },
+      "hidden_layer_size": {
+        "type": "integer",
+        "default": 100,
+        "description": "Size of the hidden layer in the LSTM model."
+      }
+    }
+  }
+}

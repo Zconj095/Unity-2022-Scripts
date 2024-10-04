@@ -1,0 +1,56 @@
+{
+  "name": "analyze_belief_interactions",
+  "description": "Analyzes the interactions of a belief with its related beliefs.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "belief"
+    ],
+    "properties": {
+      "belief": {
+        "type": "object",
+        "required": [
+          "name",
+          "category",
+          "influence_on_emotions"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the primary belief."
+          },
+          "category": {
+            "type": "string",
+            "description": "The category of the belief."
+          },
+          "related_beliefs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the related belief."
+                },
+                "category": {
+                  "type": "string",
+                  "description": "The category of the related belief."
+                },
+                "influence_on_emotions": {
+                  "type": "string",
+                  "description": "The influence of the related belief on emotions."
+                }
+              }
+            },
+            "description": "A list of related beliefs."
+          },
+          "influence_on_emotions": {
+            "type": "string",
+            "description": "The influence of the belief on emotions."
+          }
+        }
+      }
+    }
+  }
+}

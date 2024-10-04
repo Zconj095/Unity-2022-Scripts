@@ -1,0 +1,17 @@
+{
+  "name": "analyze_heart_rate",
+  "description": "Analyzes heart rate data to determine if it falls within normal ranges.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "data"
+    ],
+    "properties": {
+      "data": {
+        "type": "integer",
+        "description": "The heart rate in beats per minute (bpm)."
+      }
+    }
+  }
+}

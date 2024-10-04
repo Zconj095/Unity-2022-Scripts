@@ -1,0 +1,35 @@
+{
+  "name": "analyze_health_data",
+  "description": "Analyzes provided health data to give insights into mental wellness and environmental factors.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "health_data"
+    ],
+    "properties": {
+      "health_data": {
+        "type": "object",
+        "required": [
+          "stress_level",
+          "mood",
+          "air_quality"
+        ],
+        "properties": {
+          "mood": {
+            "type": "string",
+            "description": "Current mood description."
+          },
+          "air_quality": {
+            "type": "string",
+            "description": "Description of the air quality."
+          },
+          "stress_level": {
+            "type": "integer",
+            "description": "Numeric representation of stress level."
+          }
+        }
+      }
+    }
+  }
+}

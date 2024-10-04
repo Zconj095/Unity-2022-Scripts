@@ -1,0 +1,25 @@
+{
+  "name": "provide_genetic_health_insights",
+  "description": "Analyzes user-provided genetic data to offer health insights, identifying potential risk factors and providing dietary advice.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "genetic_data"
+    ],
+    "properties": {
+      "genetic_data": {
+        "type": "object",
+        "required": [
+          "VitaminD_Deficiency_Risk"
+        ],
+        "properties": {
+          "VitaminD_Deficiency_Risk": {
+            "type": "boolean",
+            "description": "Indicates whether the user has a genetic predisposition to Vitamin D deficiency."
+          }
+        }
+      }
+    }
+  }
+}

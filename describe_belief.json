@@ -1,0 +1,27 @@
+{
+  "name": "describe_belief",
+  "description": "Describes a belief based on its name, category, and influence on emotions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "name",
+      "category",
+      "influence_on_emotions"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the belief (e.g., Karma, Law of Attraction)."
+      },
+      "category": {
+        "type": "string",
+        "description": "The category of the belief (e.g., Spiritual, Emotional)."
+      },
+      "influence_on_emotions": {
+        "type": "string",
+        "description": "A description of how this belief influences emotions."
+      }
+    }
+  }
+}

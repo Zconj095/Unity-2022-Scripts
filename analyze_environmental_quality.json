@@ -1,0 +1,30 @@
+{
+  "name": "analyze_environmental_quality",
+  "description": "Analyzes the environmental quality based on the provided location data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "location_data"
+    ],
+    "properties": {
+      "location_data": {
+        "type": "object",
+        "required": [
+          "latitude",
+          "longitude"
+        ],
+        "properties": {
+          "latitude": {
+            "type": "number",
+            "description": "The latitude of the location to be analyzed."
+          },
+          "longitude": {
+            "type": "number",
+            "description": "The longitude of the location to be analyzed."
+          }
+        }
+      }
+    }
+  }
+}

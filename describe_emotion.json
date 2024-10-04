@@ -1,0 +1,27 @@
+{
+  "name": "describe_emotion",
+  "description": "Describes an emotion based on its name, intensity, and impact on behavior.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "name",
+      "intensity",
+      "impact_on_behavior"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the emotion (e.g., Happiness, Sadness)."
+      },
+      "intensity": {
+        "type": "integer",
+        "description": "A numerical value representing the intensity of the emotion."
+      },
+      "impact_on_behavior": {
+        "type": "string",
+        "description": "A description of how this emotion impacts behavior."
+      }
+    }
+  }
+}

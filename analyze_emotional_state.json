@@ -1,0 +1,30 @@
+{
+  "name": "analyze_emotional_state",
+  "description": "Analyzes the user's emotional state based on current biometric data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "biometric_data"
+    ],
+    "properties": {
+      "biometric_data": {
+        "type": "object",
+        "required": [
+          "heart_rate",
+          "skin_conductance"
+        ],
+        "properties": {
+          "heart_rate": {
+            "type": "number",
+            "description": "The user's heart rate in beats per minute."
+          },
+          "skin_conductance": {
+            "type": "number",
+            "description": "The user's skin conductance level, indicating stress or emotional arousal."
+          }
+        }
+      }
+    }
+  }
+}

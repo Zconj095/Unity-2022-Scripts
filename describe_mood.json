@@ -1,0 +1,27 @@
+{
+  "name": "describe_mood",
+  "description": "Describes a mood based on its name, duration, and overall effect.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "name",
+      "duration",
+      "overall_effect"
+    ],
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the mood (e.g., Calm, Anxious)."
+      },
+      "duration": {
+        "type": "string",
+        "description": "The duration of the mood (e.g., Several hours, A day)."
+      },
+      "overall_effect": {
+        "type": "string",
+        "description": "A description of the overall effect of this mood on the individual."
+      }
+    }
+  }
+}

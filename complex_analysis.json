@@ -1,0 +1,84 @@
+{
+  "name": "complex_analysis",
+  "description": "Conducts a complex analysis of the user's emotional state, considering their emotions, mood, feelings, and beliefs.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_emotion",
+      "user_mood",
+      "user_feeling",
+      "user_belief"
+    ],
+    "properties": {
+      "user_mood": {
+        "type": "object",
+        "required": [
+          "name",
+          "duration"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user's current mood."
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the user's current mood."
+          }
+        }
+      },
+      "user_belief": {
+        "type": "object",
+        "required": [
+          "name",
+          "category"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user's current belief."
+          },
+          "category": {
+            "type": "string",
+            "description": "The category of the user's current belief."
+          }
+        }
+      },
+      "user_emotion": {
+        "type": "object",
+        "required": [
+          "name",
+          "intensity"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the user's current emotion."
+          },
+          "intensity": {
+            "type": "integer",
+            "description": "The intensity of the user's current emotion."
+          }
+        }
+      },
+      "user_feeling": {
+        "type": "object",
+        "required": [
+          "description",
+          "cause"
+        ],
+        "properties": {
+          "cause": {
+            "type": "string",
+            "description": "The cause of the user's current feeling."
+          },
+          "description": {
+            "type": "string",
+            "description": "The description of the user's current feeling."
+          }
+        }
+      }
+    }
+  }
+}

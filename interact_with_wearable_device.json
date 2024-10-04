@@ -1,0 +1,21 @@
+{
+  "name": "interact_with_wearable_device",
+  "description": "Manages the synchronization and retrieval of health data from a wearable device, tracking metrics such as steps, heart rate, and sleep quality.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "action"
+    ],
+    "properties": {
+      "action": {
+        "enum": [
+          "sync_data",
+          "get_data"
+        ],
+        "type": "string",
+        "description": "The action to perform: synchronize the data with the device or retrieve the latest data."
+      }
+    }
+  }
+}

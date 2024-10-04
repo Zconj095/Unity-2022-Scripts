@@ -1,0 +1,40 @@
+{
+  "name": "analyze_nutritional_intake",
+  "description": "Analyzes nutritional data to provide feedback on caloric intake, indicating whether it is high or within recommended limits.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "nutritional_data"
+    ],
+    "properties": {
+      "nutritional_data": {
+        "type": "object",
+        "required": [
+          "calories",
+          "protein",
+          "carbs",
+          "fats"
+        ],
+        "properties": {
+          "fats": {
+            "type": "integer",
+            "description": "The amount of fats consumed, measured in grams."
+          },
+          "carbs": {
+            "type": "integer",
+            "description": "The amount of carbohydrates consumed, measured in grams."
+          },
+          "protein": {
+            "type": "integer",
+            "description": "The amount of protein consumed, measured in grams."
+          },
+          "calories": {
+            "type": "integer",
+            "description": "The total number of calories consumed."
+          }
+        }
+      }
+    }
+  }
+}

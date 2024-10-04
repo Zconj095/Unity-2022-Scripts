@@ -1,0 +1,10 @@
+{
+  "name": "simulate_wearable_device_data",
+  "description": "Simulates the synchronization and retrieval of data from a wearable device, such as steps taken and heart rate measurements.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [],
+    "properties": {}
+  }
+}

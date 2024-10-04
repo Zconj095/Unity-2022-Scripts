@@ -1,0 +1,25 @@
+{
+  "name": "analyze_chakras",
+  "description": "Analyze the chakras based on blood pressure and emotional state.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "blood_pressure",
+      "emotional_state"
+    ],
+    "properties": {
+      "blood_pressure": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "description": "Blood pressure readings (systolic, diastolic) in mmHg."
+      },
+      "emotional_state": {
+        "type": "string",
+        "description": "Current emotional state."
+      }
+    }
+  }
+}

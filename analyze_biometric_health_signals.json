@@ -1,0 +1,29 @@
+{
+  "name": "analyze_biometric_health_signals",
+  "description": "Analyzes biometric data to provide health signals and warnings based on predefined thresholds.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "biometric_data"
+    ],
+    "properties": {
+      "biometric_data": {
+        "type": "object",
+        "required": [
+          "skin_temperature"
+        ],
+        "properties": {
+          "skin_temperature": {
+            "type": "number",
+            "description": "Skin temperature in Farenheit."
+          },
+          "galvanic_skin_response": {
+            "type": "number",
+            "description": "Galvanic skin response measurements."
+          }
+        }
+      }
+    }
+  }
+}

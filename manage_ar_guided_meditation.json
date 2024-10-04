@@ -1,0 +1,39 @@
+{
+  "name": "manage_ar_guided_meditation",
+  "description": "Manages an AR-guided meditation session, including starting and adjusting the session based on user preferences.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "action",
+      "session_details"
+    ],
+    "properties": {
+      "action": {
+        "enum": [
+          "start_session",
+          "adjust_session"
+        ],
+        "type": "string",
+        "description": "The action to perform: either start or adjust the meditation session."
+      },
+      "session_details": {
+        "type": "object",
+        "required": [
+          "environment",
+          "session_length"
+        ],
+        "properties": {
+          "environment": {
+            "type": "string",
+            "description": "The virtual environment for the meditation session."
+          },
+          "session_length": {
+            "type": "string",
+            "description": "The length of the meditation session."
+          }
+        }
+      }
+    }
+  }
+}

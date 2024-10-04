@@ -1,0 +1,20 @@
+{
+  "name": "analyze_blood_pressure",
+  "description": "Analyzes blood pressure data to determine if it falls within normal ranges.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "data"
+    ],
+    "properties": {
+      "data": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "description": "The blood pressure readings (systolic, diastolic) in mmHg."
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "interact_with_central_health_system",
+  "description": "Manages a comprehensive health system that integrates user profile, nutritional analysis, and wearable device data to update and display a health dashboard.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_profile",
+      "nutritional_data",
+      "action"
+    ],
+    "properties": {
+      "action": {
+        "enum": [
+          "update_system",
+          "display_dashboard"
+        ],
+        "type": "string",
+        "description": "The action to be performed: either update the system data or display the health dashboard."
+      },
+      "user_profile": {
+        "type": "object",
+        "required": [
+          "name",
+          "age"
+        ],
+        "properties": {
+          "age": {
+            "type": "integer",
+            "description": "The user's age."
+          },
+          "name": {
+            "type": "string",
+            "description": "The user's name."
+          },
+          "additional_info": {
+            "type": "object",
+            "description": "Additional profile information such as health conditions, lifestyle choices, etc."
+          }
+        }
+      },
+      "nutritional_data": {
+        "type": "object",
+        "required": [
+          "calories",
+          "protein",
+          "carbs",
+          "fats"
+        ],
+        "properties": {
+          "fats": {
+            "type": "integer",
+            "description": "Daily fat intake in grams."
+          },
+          "carbs": {
+            "type": "integer",
+            "description": "Daily carbohydrate intake in grams."
+          },
+          "protein": {
+            "type": "integer",
+            "description": "Daily protein intake in grams."
+          },
+          "calories": {
+            "type": "integer",
+            "description": "Daily calorie intake."
+          },
+          "additional_nutrients": {
+            "type": "object",
+            "description": "Additional nutritional data such as fiber, vitamins, etc."
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "predict_health_risks",
+  "description": "Analyzes user health data to predict potential future health risks and provide recommended actions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_health_data"
+    ],
+    "properties": {
+      "user_health_data": {
+        "type": "object",
+        "required": [
+          "blood_pressure",
+          "heart_rate"
+        ],
+        "properties": {
+          "heart_rate": {
+            "type": "integer",
+            "description": "The user's heart rate, measured in beats per minute."
+          },
+          "blood_pressure": {
+            "type": "integer",
+            "description": "The user's blood pressure measurement."
+          }
+        }
+      }
+    }
+  }
+}

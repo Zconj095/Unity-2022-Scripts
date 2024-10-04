@@ -1,0 +1,113 @@
+{
+  "name": "model_chakras_and_aura",
+  "description": "Models chakra states based on endocrine data and integrates them to assess the aura.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "endocrine_data"
+    ],
+    "properties": {
+      "endocrine_data": {
+        "type": "object",
+        "required": [
+          "adrenal",
+          "gonads",
+          "pancreas",
+          "thymus",
+          "thyroid",
+          "pituitary",
+          "pineal"
+        ],
+        "properties": {
+          "gonads": {
+            "type": "object",
+            "properties": {
+              "lh": {
+                "type": "number"
+              },
+              "estrogen": {
+                "type": "number"
+              },
+              "testosterone": {
+                "type": "number"
+              }
+            }
+          },
+          "pineal": {
+            "type": "object",
+            "properties": {
+              "melatonin": {
+                "type": "number"
+              },
+              "serotonin": {
+                "type": "number"
+              }
+            }
+          },
+          "thymus": {
+            "type": "object",
+            "properties": {
+              "il_7": {
+                "type": "number"
+              },
+              "thymulin": {
+                "type": "number"
+              }
+            }
+          },
+          "adrenal": {
+            "type": "object",
+            "properties": {
+              "hrv": {
+                "type": "integer"
+              },
+              "cortisol": {
+                "type": "number"
+              },
+              "epinephrine": {
+                "type": "number"
+              }
+            }
+          },
+          "thyroid": {
+            "type": "object",
+            "properties": {
+              "t3": {
+                "type": "number"
+              },
+              "t4": {
+                "type": "number"
+              }
+            }
+          },
+          "pancreas": {
+            "type": "object",
+            "properties": {
+              "amylase": {
+                "type": "number"
+              },
+              "insulin": {
+                "type": "number"
+              },
+              "glucagon": {
+                "type": "number"
+              }
+            }
+          },
+          "pituitary": {
+            "type": "object",
+            "properties": {
+              "dopamine": {
+                "type": "number"
+              },
+              "oxytocin": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

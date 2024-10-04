@@ -1,0 +1,22 @@
+{
+  "name": "manage_user_feedback",
+  "description": "Collects and analyzes user feedback to improve system functionalities.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_id",
+      "feedback"
+    ],
+    "properties": {
+      "user_id": {
+        "type": "string",
+        "description": "The user's ID for identifying feedback."
+      },
+      "feedback": {
+        "type": "string",
+        "description": "The actual feedback content from the user."
+      }
+    }
+  }
+}

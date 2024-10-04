@@ -1,0 +1,30 @@
+{
+  "name": "recommend_mind_body_wellness_routine",
+  "description": "Recommends a mind-body wellness routine based on the user's stress level and physical activity data.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_data"
+    ],
+    "properties": {
+      "user_data": {
+        "type": "object",
+        "required": [
+          "stress_level",
+          "physical_activity"
+        ],
+        "properties": {
+          "stress_level": {
+            "type": "integer",
+            "description": "The user's current stress level on a scale of 1 to 10."
+          },
+          "physical_activity": {
+            "type": "string",
+            "description": "The user's current level of physical activity."
+          }
+        }
+      }
+    }
+  }
+}

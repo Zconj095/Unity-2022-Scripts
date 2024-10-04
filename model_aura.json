@@ -1,0 +1,35 @@
+{
+  "name": "model_aura",
+  "description": "Models the user's aura based on extracted features.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "features"
+    ],
+    "properties": {
+      "features": {
+        "type": "object",
+        "required": [
+          "emotional_intensity",
+          "heart_rate",
+          "stress_level"
+        ],
+        "properties": {
+          "heart_rate": {
+            "type": "integer",
+            "description": "The user's heart rate."
+          },
+          "stress_level": {
+            "type": "number",
+            "description": "The user's stress level."
+          },
+          "emotional_intensity": {
+            "type": "number",
+            "description": "The sentiment intensity derived from the user's emotional state."
+          }
+        }
+      }
+    }
+  }
+}

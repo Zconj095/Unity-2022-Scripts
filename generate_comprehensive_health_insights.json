@@ -1,0 +1,73 @@
+{
+  "name": "generate_comprehensive_health_insights",
+  "description": "Generates comprehensive health insights based on inputted nutritional and physiological data, analyzing potential deficiencies, excesses, and overall health trends.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "nutritional_data",
+      "physiological_data"
+    ],
+    "properties": {
+      "nutritional_data": {
+        "type": "object",
+        "required": [
+          "calories",
+          "protein",
+          "carbs",
+          "fats",
+          "fiber"
+        ],
+        "properties": {
+          "fats": {
+            "type": "string",
+            "description": "Total daily fat intake in grams."
+          },
+          "carbs": {
+            "type": "string",
+            "description": "Total daily carbohydrate intake in grams."
+          },
+          "fiber": {
+            "type": "string",
+            "description": "Total daily fiber intake in grams."
+          },
+          "protein": {
+            "type": "string",
+            "description": "Total daily protein intake in grams."
+          },
+          "calories": {
+            "type": "integer",
+            "description": "Total daily calorie intake."
+          }
+        }
+      },
+      "physiological_data": {
+        "type": "object",
+        "required": [
+          "heart_rate",
+          "blood_pressure",
+          "sleep_duration",
+          "steps"
+        ],
+        "properties": {
+          "steps": {
+            "type": "integer",
+            "description": "Number of steps taken per day."
+          },
+          "heart_rate": {
+            "type": "string",
+            "description": "Heart rate in beats per minute."
+          },
+          "blood_pressure": {
+            "type": "string",
+            "description": "Blood pressure as systolic/diastolic."
+          },
+          "sleep_duration": {
+            "type": "string",
+            "description": "Average sleep duration per night in hours."
+          }
+        }
+      }
+    }
+  }
+}

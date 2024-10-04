@@ -1,0 +1,56 @@
+{
+  "name": "analyze_mood_influence",
+  "description": "Analyzes the influence of a mood in conjunction with its related moods.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "mood"
+    ],
+    "properties": {
+      "mood": {
+        "type": "object",
+        "required": [
+          "name",
+          "duration",
+          "overall_effect"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the primary mood."
+          },
+          "duration": {
+            "type": "string",
+            "description": "The duration of the mood."
+          },
+          "related_moods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The name of the related mood."
+                },
+                "duration": {
+                  "type": "string",
+                  "description": "The duration of the related mood."
+                },
+                "overall_effect": {
+                  "type": "string",
+                  "description": "The overall effect of the related mood."
+                }
+              }
+            },
+            "description": "A list of related moods."
+          },
+          "overall_effect": {
+            "type": "string",
+            "description": "The overall effect of the mood."
+          }
+        }
+      }
+    }
+  }
+}

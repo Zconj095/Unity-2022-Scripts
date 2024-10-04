@@ -1,0 +1,45 @@
+{
+  "name": "calculate_hyperroot_flux_parameter_expanded",
+  "description": "Calculates the hyperroot flux parameter (HFP) using CuPy, incorporating detailed parameter initialization and computation across multidimensional arrays.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "R",
+      "H",
+      "S"
+    ],
+    "properties": {
+      "H": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        "description": "Base dense hyperparameters, a two-dimensional array of floating-point numbers."
+      },
+      "R": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        },
+        "description": "Primary root hyperflux parameter, a CuPy array of floating-point numbers."
+      },
+      "S": {
+        "type": "array",
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "description": "Array of multidimensional subbase sectors, a three-dimensional array of floating-point numbers."
+      }
+    }
+  }
+}

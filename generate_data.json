@@ -1,0 +1,27 @@
+{
+  "name": "generate_data",
+  "description": "Generates synthetic time series data simulating encoded glyphs and cryostasis responses with cyclical patterns and added noise.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "timesteps",
+      "data_dim"
+    ],
+    "properties": {
+      "data_dim": {
+        "type": "integer",
+        "description": "Number of features simulating different types of glyphs."
+      },
+      "timesteps": {
+        "type": "integer",
+        "description": "Number of time steps per sample."
+      },
+      "num_samples": {
+        "type": "integer",
+        "default": 1000,
+        "description": "Total number of samples to generate."
+      }
+    }
+  }
+}

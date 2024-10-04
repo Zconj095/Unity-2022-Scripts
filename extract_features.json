@@ -1,0 +1,51 @@
+{
+  "name": "extract_features",
+  "description": "Extracts features from user emotional data and physiological measurements for further analysis.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_data",
+      "physiological_data"
+    ],
+    "properties": {
+      "user_data": {
+        "type": "object",
+        "required": [
+          "emotional_state"
+        ],
+        "properties": {
+          "emotional_state": {
+            "type": "string",
+            "description": "The user's current emotional state."
+          }
+        }
+      },
+      "physiological_data": {
+        "type": "object",
+        "required": [
+          "heart_rate",
+          "respiration_rate",
+          "blood_pressure"
+        ],
+        "properties": {
+          "heart_rate": {
+            "type": "integer",
+            "description": "The user's current heart rate."
+          },
+          "blood_pressure": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "description": "The user's current blood pressure as a tuple (systolic, diastolic)."
+          },
+          "respiration_rate": {
+            "type": "integer",
+            "description": "The user's current respiration rate."
+          }
+        }
+      }
+    }
+  }
+}

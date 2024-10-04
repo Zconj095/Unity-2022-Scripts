@@ -1,0 +1,27 @@
+{
+  "name": "execute_cortical_system",
+  "description": "Executes a comprehensive simulation of a cortical system involving quantum circuits and neural network predictions.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "num_qubits",
+      "time_steps",
+      "frequency"
+    ],
+    "properties": {
+      "frequency": {
+        "type": "number",
+        "description": "Frequency for the sinusoidal rotation in the quantum circuit"
+      },
+      "num_qubits": {
+        "type": "integer",
+        "description": "Number of qubits in the quantum circuit"
+      },
+      "time_steps": {
+        "type": "integer",
+        "description": "Number of time steps in the quantum circuit simulation"
+      }
+    }
+  }
+}

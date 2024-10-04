@@ -1,0 +1,42 @@
+{
+  "name": "interact_with_voice_activated_health_assistant",
+  "description": "Processes simulated voice commands to interact with a health system, providing actions like generating health summaries or setting reminders based on user input.",
+  "strict": false,
+  "parameters": {
+    "type": "object",
+    "required": [
+      "user_profile",
+      "voice_input"
+    ],
+    "properties": {
+      "voice_input": {
+        "type": "string",
+        "description": "The voice command provided by the user, which the health assistant will process."
+      },
+      "user_profile": {
+        "type": "object",
+        "required": [
+          "name",
+          "age"
+        ],
+        "properties": {
+          "age": {
+            "type": "integer",
+            "description": "The user's age."
+          },
+          "name": {
+            "type": "string",
+            "description": "The user's name."
+          },
+          "health_conditions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of user's known health conditions."
+          }
+        }
+      }
+    }
+  }
+}
