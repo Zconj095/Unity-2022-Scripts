@@ -1,0 +1,24 @@
+import numpy as np
+from sklearn.preprocessing import FunctionTransformer
+relu_transformer = FunctionTransformer(np.maximum, kw_args={'b': 0})
+player_xp = np.array([100, 500, 1500, 3000, 5000])  # Example XP points
+player_levels = relu_transformer.transform(player_xp.reshape(-1, 1)) / 1000  # Dividing by 1000 for scaling
+weapon_usage = np.array([20, 50, 120, 250, 400])  # Example usage points
+weapon_skill_levels = relu_transformer.transform(weapon_usage.reshape(-1, 1)) / 50  # Dividing by 50 for scaling
+import numpy as np
+from sklearn.preprocessing import FunctionTransformer
+
+# Initialize ReLU transformer
+relu_transformer = FunctionTransformer(np.maximum, kw_args={'b': 0})
+
+# Player experience points
+player_xp = np.array([100, 500, 1500, 3000, 5000])
+player_levels = relu_transformer.transform(player_xp.reshape(-1, 1)) / 1000
+
+# Weapon usage points
+weapon_usage = np.array([20, 50, 120, 250, 400])
+weapon_skill_levels = relu_transformer.transform(weapon_usage.reshape(-1, 1)) / 50
+
+# Display results
+print("Player Levels:", player_levels.flatten())
+print("Weapon Skill Levels:", weapon_skill_levels.flatten())
